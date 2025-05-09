@@ -1,0 +1,103 @@
+[
+    {
+        "name": "Shohidur Rahmon",
+        "designation": "Department Head",
+        "specialized_area": [
+            "Graphic Design",
+            "Brand Design",
+            "Logo Design",
+            "Animation"
+        ],
+        "education_qualification": [
+            "MBS (Accounting)",
+            "Diploma In Graphic Design",
+            "Diploma In Merchandising",
+            "CBT&A (Level 5)"
+        ],
+        "work_experience": [
+            "Former Trainer Bangladesh Computer Council (B.C.C)",
+            "Guest Trainer BUTEX",
+            "Freelancer"
+        ],
+        "training_experience": {
+            "years": "10",
+            "students": "4000"
+        },
+        "image": "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"
+    },
+    {
+        "name": "Farzana Ahmed",
+        "designation": "Senior Instructor",
+        "specialized_area": [
+            "UI/UX Design",
+            "Web Design",
+            "Front-End Development",
+            "Design Thinking"
+        ],
+        "education_qualification": [
+            "BSc in Computer Science",
+            "Diploma in UX/UI Design",
+            "Certificate in Web Development"
+        ],
+        "work_experience": [
+            "Former UI Designer at TechnoNext",
+            "Lead Trainer at Creative IT",
+            "Freelance Web Designer"
+        ],
+        "training_experience": {
+            "years": "8",
+            "students": "3000"
+        },
+        "image": "https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+    },
+    {
+        "name": "Kamrul Hasan",
+        "designation": "Visual Content Specialist",
+        "specialized_area": [
+            "Motion Graphics",
+            "2D Animation",
+            "Video Editing",
+            "Storyboarding"
+        ],
+        "education_qualification": [
+            "BA in Fine Arts",
+            "Diploma in Animation",
+            "Certification in Adobe After Effects"
+        ],
+        "work_experience": [
+            "Animator at Channel i",
+            "Video Editor at Pathao Studios",
+            "Freelance Motion Designer"
+        ],
+        "training_experience": {
+            "years": "6",
+            "students": "2500"
+        },
+        "image": "https://t3.ftcdn.net/jpg/02/68/56/00/360_F_268560012_H1efJHOgwhsE9avs3D9fL8DqAqkG88eG.jpg"
+    },
+    {
+        "name": "Nusrat Jahan",
+        "designation": "Lead Branding Consultant",
+        "specialized_area": [
+            "Brand Strategy",
+            "Corporate Identity Design",
+            "Packaging Design",
+            "Market Research"
+        ],
+        "education_qualification": [
+            "MBA in Marketing",
+            "Diploma in Brand Design",
+            "Training in Strategic Communication"
+        ],
+        "work_experience": [
+            "Former Brand Consultant at Unilever",
+            "Guest Lecturer at NSU",
+            "Branding Consultant (Freelance)"
+        ],
+        "training_experience": {
+            "years": "9",
+            "students": "3200"
+        },
+        "image": "https://media.istockphoto.com/id/1048700250/photo/handsome-nerd-on-grey-background.jpg?s=612x612&w=0&k=20&c=pxOLrYhynMg8TK3QuflJ_iv3n7tA8GakecdorASg60E="
+    }
+]

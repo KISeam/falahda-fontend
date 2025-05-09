@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+/* Poppins Font */
+.poppins {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.lobster {
+  font-family: "Playwrite AU SA", cursive;
+}
+
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.outfit-semibold {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.cpr{
+  color:#00DDB3;
+}
+.csd{
+  color:#6a67ce;
+}
+.crd{
+  color:#717072;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+
+
+}
+@keyframes float-slow {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float-medium {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float-fast {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float-slowest {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Floating classes */
+.float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: float-medium 5s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: float-fast 3s ease-in-out infinite;
+}
+
+.float-slowest {
+  animation: float-slowest 6s ease-in-out infinite;
+}
+.smoke {
+  position: absolute;
+  top: 50%; /* Adjust this value to match the smoke start point on the mountain */
+  left: 40%; /* Adjust based on your mountain image */
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(rgba(200, 200, 200, 0.4), transparent);
+  border-radius: 50%;
+  animation: smoke-rise 4s infinite linear;
+  filter: blur(6px);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+@keyframes smoke-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-60px) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.5);
+    opacity: 0;
+  }
+}

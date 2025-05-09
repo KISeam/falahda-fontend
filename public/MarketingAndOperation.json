@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Aminul Islam",
+        "designation": "Marketing Director",
+        "specialized_area": [
+            "Digital Marketing",
+            "Brand Strategy",
+            "Market Research",
+            "Campaign Management"
+        ],
+        "education_qualification": [
+            "MBA in Marketing",
+            "Certified Digital Marketing Professional",
+            "BBA in International Business"
+        ],
+        "work_experience": [
+            "Former Head of Marketing at Unilever Bangladesh",
+            "Marketing Consultant at Asiatic MCL",
+            "Digital Marketing Trainer at BITM"
+        ],
+        "training_experience": {
+            "years": "12",
+            "students": "5000"
+        },
+        "image": "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtTUT4xRcwfOwvbdR7TJRZQ4xIsg6f_CKsI5Z6XzQjY="
+    },
+    {
+        "name": "Tasnim Rahman",
+        "designation": "Operations Manager",
+        "specialized_area": [
+            "Supply Chain Management",
+            "Process Optimization",
+            "Logistics",
+            "Team Leadership"
+        ],
+        "education_qualification": [
+            "MSc in Operations Management",
+            "Certified Supply Chain Professional",
+            "BSc in Industrial Engineering"
+        ],
+        "work_experience": [
+            "Former Operations Head at Daraz Bangladesh",
+            "Logistics Manager at Unilever",
+            "Operations Consultant"
+        ],
+        "training_experience": {
+            "years": "8",
+            "students": "2800"
+        },
+        "image": "https://t4.ftcdn.net/jpg/01/18/03/25/360_F_118032506_6wDqgGZgYoEcKuk2xqXwE6ZP62qQhYw0.jpg"
+    },
+    {
+        "name": "Farhana Akter",
+        "designation": "Digital Marketing Specialist",
+        "specialized_area": [
+            "SEO/SEM",
+            "Social Media Marketing",
+            "Content Strategy",
+            "Analytics"
+        ],
+        "education_qualification": [
+            "BBA in Marketing",
+            "Google Ads Certification",
+            "Facebook Blueprint Certified"
+        ],
+        "work_experience": [
+            "Former Digital Marketing Lead at bKash",
+            "Social Media Manager at Foodpanda",
+            "Freelance Digital Marketer"
+        ],
+        "training_experience": {
+            "years": "6",
+            "students": "3500"
+        },
+        "image": "https://media.istockphoto.com/id/1386479313/photo/happy-millennial-african-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY="
+    },
+    {
+        "name": "Rakib Hassan",
+        "designation": "Supply Chain Analyst",
+        "specialized_area": [
+            "Inventory Management",
+            "Data Analysis",
+            "Vendor Relations",
+            "Cost Reduction"
+        ],
+        "education_qualification": [
+            "BSc in Supply Chain Management",
+            "Certified in Data Analytics",
+            "Diploma in Logistics"
+        ],
+        "work_experience": [
+            "Former Analyst at Akij Group",
+            "Inventory Specialist at Square Pharmaceuticals",
+            "Logistics Consultant"
+        ],
+        "training_experience": {
+            "years": "5",
+            "students": "1800"
+        },
+        "image": "https://t3.ftcdn.net/jpg/02/30/60/82/360_F_230608244_1h3YnzYxEE0qKXQVfOJYx1YrQkqNHMl0.jpg"
+    },
+    {
+        "name": "Sabrina Chowdhury",
+        "designation": "Marketing Communications Manager",
+        "specialized_area": [
+            "Public Relations",
+            "Content Marketing",
+            "Corporate Communications",
+            "Crisis Management"
+        ],
+        "education_qualification": [
+            "MA in Mass Communication",
+            "Certification in PR Management",
+            "BA in Journalism"
+        ],
+        "work_experience": [
+            "Former PR Manager at Grameenphone",
+            "Communications Specialist at BATB",
+            "Media Consultant"
+        ],
+        "training_experience": {
+            "years": "7",
+            "students": "2200"
+        },
+        "image": "https://media.istockphoto.com/id/1311084168/photo/overjoyed-pretty-asian-woman-in-white-suit-standing-with-arms-crossed-smiling-at-camera.jpg?s=612x612&w=0&k=20&c=J7K9byPjH1NQTrs4HfHUxZqgSdRPq9W4pDxZ9LQQqY8="
+    },
+    {
+        "name": "Imran Khan",
+        "designation": "Operations Coordinator",
+        "specialized_area": [
+            "Project Management",
+            "Quality Control",
+            "Team Coordination",
+            "Process Documentation"
+        ],
+        "education_qualification": [
+            "BSc in Business Administration",
+            "PMP Certified",
+            "Six Sigma Green Belt"
+        ],
+        "work_experience": [
+            "Former Project Coordinator at BRAC",
+            "Quality Assurance Officer at Pran-RFL",
+            "Operations Trainer"
+        ],
+        "training_experience": {
+            "years": "4",
+            "students": "1500"
+        },
+        "image": "https://t3.ftcdn.net/jpg/03/02/95/10/360_F_302951063_j1VhBVY5QY0qw5R2oKPSQXCvGorjJTyH.jpg"
+    }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Rafiqul Islam",
+        "designation": "Head of Sales & Communication",
+        "specialized_area": [
+            "Sales Strategy",
+            "Client Relationship Management",
+            "Corporate Communication",
+            "Negotiation"
+        ],
+        "education_qualification": [
+            "MBA in Marketing",
+            "Certified Sales Professional (CSP)",
+            "Diploma in Business Communication"
+        ],
+        "work_experience": [
+            "Former Sales Director at Grameenphone",
+            "Key Account Manager at Unilever",
+            "Sales Trainer at Bangladesh Brand Forum"
+        ],
+        "training_experience": {
+            "years": "12",
+            "students": "4500"
+        },
+        "image": "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtTUT4xRcwfOwvbdR7TJRZQ4xIsg6f_CKsI5Z6XzQjY="
+    },
+    {
+        "name": "Tahmina Akter",
+        "designation": "Corporate Communication Manager",
+        "specialized_area": [
+            "Public Relations",
+            "Crisis Communication",
+            "Media Relations",
+            "Internal Communication"
+        ],
+        "education_qualification": [
+            "MA in Mass Communication",
+            "Certification in PR Management",
+            "Diploma in Digital Media"
+        ],
+        "work_experience": [
+            "Ex-PR Manager at Robi Axiata",
+            "Communication Specialist at bKash",
+            "Freelance Media Consultant"
+        ],
+        "training_experience": {
+            "years": "8",
+            "students": "3000"
+        },
+        "image": "https://media.istockphoto.com/id/1386479313/photo/happy-millennial-african-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY="
+    },
+    {
+        "name": "Arif Khan",
+        "designation": "Sales Team Lead",
+        "specialized_area": [
+            "B2B Sales",
+            "Market Expansion",
+            "Customer Retention",
+            "Sales Forecasting"
+        ],
+        "education_qualification": [
+            "BBA in Marketing",
+            "Certification in Advanced Sales Techniques",
+            "Diploma in CRM"
+        ],
+        "work_experience": [
+            "Former Sales Manager at Daraz Bangladesh",
+            "Territory Manager at British American Tobacco",
+            "Sales Trainer at BITM"
+        ],
+        "training_experience": {
+            "years": "7",
+            "students": "2800"
+        },
+        "image": "https://t3.ftcdn.net/jpg/03/02/95/10/360_F_302951063_j1VhBVY5QY0qw5R2oKPSQXCvGorjJTyH.jpg"
+    },
+    {
+        "name": "Nadia Sultana",
+        "designation": "Digital Communication Specialist",
+        "specialized_area": [
+            "Social Media Management",
+            "Content Strategy",
+            "Influencer Marketing",
+            "SEO Writing"
+        ],
+        "education_qualification": [
+            "BSc in Media Studies",
+            "Certification in Digital Marketing",
+            "Diploma in Content Creation"
+        ],
+        "work_experience": [
+            "Social Media Lead at Foodpanda",
+            "Content Manager at 10 Minute School",
+            "Freelance Digital Strategist"
+        ],
+        "training_experience": {
+            "years": "5",
+            "students": "2000"
+        },
+        "image": "https://t4.ftcdn.net/jpg/01/18/03/25/360_F_118032506_6wDqgGZgYoEcKuk2xqXwE6ZP62qQhYw0.jpg"
+    },
+    {
+        "name": "Sakib Al Hasan",
+        "designation": "Key Account Manager",
+        "specialized_area": [
+            "Client Acquisition",
+            "Contract Negotiation",
+            "Sales Presentations",
+            "Revenue Growth"
+        ],
+        "education_qualification": [
+            "MBA in International Business",
+            "Certification in Strategic Selling",
+            "Diploma in Customer Psychology"
+        ],
+        "work_experience": [
+            "Former National Sales Manager at Berger Paints",
+            "Account Executive at Huawei Bangladesh",
+            "Sales Consultant"
+        ],
+        "training_experience": {
+            "years": "9",
+            "students": "3500"
+        },
+        "image": "https://media.istockphoto.com/id/482100176/photo/confident-in-his-business-ability.jpg?s=612x612&w=0&k=20&c=FCmJDrcEsX7U8euCb_rFlnpD_owJ6t1tw3pBJJW34uY="
+    },
+    {
+        "name": "Farah Deeba",
+        "designation": "Customer Relationship Officer",
+        "specialized_area": [
+            "Client Support",
+            "CRM Software",
+            "Feedback Management",
+            "Upselling Techniques"
+        ],
+        "education_qualification": [
+            "BBA in Management",
+            "Certification in CRM Systems",
+            "Diploma in Customer Service Excellence"
+        ],
+        "work_experience": [
+            "Ex-Customer Success Manager at Pathao",
+            "Client Relations Officer at Daraz",
+            "Customer Service Trainer"
+        ],
+        "training_experience": {
+            "years": "4",
+            "students": "1800"
+        },
+        "image": "https://media.istockphoto.com/id/1311084168/photo/overjoyed-pretty-asian-woman-in-white-suit-standing-with-arms-crossed-smiling-at-camera.jpg?s=612x612&w=0&k=20&c=J7K9byPjH1NQTrs4HfHUxZqgSdRPq9W4pDxZ9LQQqY8="
+    }
+]
