@@ -1,0 +1,1222 @@
+[
+  {
+    "id": 1,
+    "title": "Re-contextualized non-volatile adapter \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 419,
+    "posted": "07 April 2025, 00:05:14",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/1*q3FMx9Udnk2e6aFIrfr6Mw.png",
+    "description": "Professional portfolio platform built with MERN stack showcasing projects and skills. Includes responsive design and contact integration.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "Project gallery with filtering options",
+        "Responsive portfolio layouts",
+        "Contact form integration",
+        "Performance analytics dashboard",
+        "SEO optimized templates"
+      ],
+      "benefits": [
+        "Showcase work effectively to potential clients",
+        "Mobile-optimized for all devices",
+        "Easy content management system"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based Web Application",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$0",
+        "active_users": 0,
+        "retention_rate": "0%"
+      },
+      "other_notes": [
+        "Optimized for developer portfolios",
+        "Includes customizable templates",
+        "Easy to deploy on any MERN stack environment"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "Documentation",
+        "Deployment guide",
+        "1 year of technical support",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Shifting focus to other business ventures, no longer able to maintain",
+      "buyer_opportunities": [
+        "Sell to freelance developers",
+        "Offer customization services",
+        "Expand template marketplace"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "Portfolio Website", "Web Application", "SaaS"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "DM for demo access and documentation. Serious inquiries only.",
+    "category": "Portfolio Website",
+    "type": "MERN"
+  },
+  {
+    "id": 2,
+    "title": "Right-sized needs-based secured line \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 171,
+    "posted": "13 June 2025, 05:30:47",
+    "image": "https://storage.googleapis.com/production-os-assets/assets/8ed8985d-de47-4dc3-b86a-68b38f6fd15a",
+    "description": "Content management system built on WordPress with SEO optimization and reader engagement features.",
+    "details": {
+      "tech_stack": ["WordPress", "PHP", "MySQL", "Elementor"],
+      "features": [
+        "Customizable blog templates",
+        "SEO optimization tools",
+        "Social media integration",
+        "Newsletter subscription",
+        "Content scheduling"
+      ],
+      "benefits": [
+        "User-friendly content management",
+        "Large plugin ecosystem",
+        "Quick deployment on any WordPress hosting"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "WordPress based CMS",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Optimized for content creators",
+        "Includes premium themes",
+        "Monetization-ready"
+      ],
+      "included_in_sale": [
+        "Complete WordPress site files",
+        "Database export",
+        "Theme customization guide",
+        "Plugin configuration",
+        "WordPress export file"
+      ],
+      "reason_for_selling": "Focusing on SaaS products, no longer maintaining content platforms",
+      "buyer_opportunities": [
+        "Monetize through affiliate marketing",
+        "Offer content writing services",
+        "Develop niche-specific blog network"
+      ]
+    },
+    "tags": ["WordPress", "PHP", "MySQL", "Elementor", "Blog Website", "CMS", "SEO"],
+    "platforms": {
+      "frontend": "WordPress",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for site demo and access details. Reasonable offers considered.",
+    "category": "Blog Website",
+    "type": "Wordpress"
+  },
+  {
+    "id": 3,
+    "title": "Face-to-face composite website \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 226,
+    "posted": "17 March 2025, 22:59:31",
+    "image": "https://img.freepik.com/free-vector/gradient-responsive-website-design_23-2149496581.jpg?semt=ais_items_boosted&w=740",
+    "description": "PHP-based blogging platform with custom themes and content management features.",
+    "details": {
+      "tech_stack": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "features": [
+        "Custom content management system",
+        "Multi-author support",
+        "SEO-friendly URLs",
+        "Comment moderation system",
+        "RSS feed integration"
+      ],
+      "benefits": [
+        "Full control over platform features",
+        "Scalable architecture",
+        "Cost-effective hosting options"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "PHP based CMS",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$0",
+        "active_users": 0,
+        "retention_rate": "0%"
+      },
+      "other_notes": [
+        "Ideal for professional bloggers",
+        "Customizable without restrictions",
+        "Database migration support"
+      ],
+      "included_in_sale": [
+        "Complete PHP source code",
+        "Database schema",
+        "Installation documentation",
+        "Theme files",
+        "Database dump"
+      ],
+      "reason_for_selling": "Company pivot to mobile applications, divesting web properties",
+      "buyer_opportunities": [
+        "Create niche blogging network",
+        "Offer premium themes",
+        "Develop SaaS version"
+      ]
+    },
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap", "Blog Website", "CMS", "SEO"],
+    "platforms": {
+      "frontend": "PHP with Bootstrap",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Contact for demo and source code preview. Negotiable pricing.",
+    "category": "Blog Website",
+    "type": "PHP"
+  },
+  {
+    "id": 4,
+    "title": "Virtual zero administration secured line \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 220,
+    "posted": "15 January 2025, 08:01:25",
+    "image": "https://meta-l.cdn.bubble.io/cdn-cgi/image/w=512,h=279,f=auto,dpr=2.5,fit=cover,q=100/f1689020946095x861578004643146500/Startup%20Dashboard.png",
+    "description": "WordPress e-commerce solution with product management and secure checkout.",
+    "details": {
+      "tech_stack": ["WordPress", "WooCommerce", "PHP", "MySQL"],
+      "features": [
+        "Product catalog management",
+        "Secure payment processing",
+        "Inventory tracking",
+        "Shipping integration",
+        "Customer accounts"
+      ],
+      "benefits": [
+        "Quick store setup",
+        "Extensive payment gateway options",
+        "Mobile-responsive storefronts"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "WordPress based E-commerce",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "PCI compliance ready",
+        "Abandoned cart recovery",
+        "Multi-currency support"
+      ],
+      "included_in_sale": [
+        "Complete WordPress installation",
+        "WooCommerce configuration",
+        "Product database",
+        "Payment gateway setup",
+        "WordPress export file"
+      ],
+      "reason_for_selling": "Focus shift to B2B solutions, divesting e-commerce assets",
+      "buyer_opportunities": [
+        "Start niche online store",
+        "Offer store management services",
+        "Develop specialty product marketplace"
+      ]
+    },
+    "tags": ["WordPress", "WooCommerce", "PHP", "MySQL", "E-commerce Website", "Online Store", "Payment Gateway"],
+    "platforms": {
+      "frontend": "WordPress",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Serious buyers contact for store demo and financials.",
+    "category": "E-commerce Website",
+    "type": "Wordpress"
+  },
+  {
+    "id": 5,
+    "title": "Cross-group interactive open architecture \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 456,
+    "posted": "18 April 2025, 02:43:19",
+    "image": "https://miro.medium.com/v2/resize:fit:1200/1*qfFhXRteMrxKYrLxd23fMA.png",
+    "description": "MERN stack e-commerce platform with real-time inventory and cart management.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "Real-time inventory tracking",
+        "Shopping cart persistence",
+        "User authentication",
+        "Product search and filtering",
+        "Order management dashboard"
+      ],
+      "benefits": [
+        "High-performance shopping experience",
+        "Scalable architecture",
+        "Modern user interface"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based E-commerce",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Payment gateway integration points",
+        "Mobile-optimized UI",
+        "API-first architecture"
+      ],
+      "included_in_sale": [
+        "Full MERN source code",
+        "Database schemas",
+        "API documentation",
+        "Deployment scripts",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Strategic shift to enterprise solutions, selling SMB products",
+      "buyer_opportunities": [
+        "Launch specialty online store",
+        "White-label solution for retailers",
+        "Develop custom marketplace"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "E-commerce Website", "Online Store", "Shopping Cart"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Request demo and technical documentation via email.",
+    "category": "E-commerce Website",
+    "type": "MERN"
+  },
+  {
+    "id": 6,
+    "title": "Multi-channeled 24hour open architecture \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 236,
+    "posted": "14 March 2025, 15:38:52",
+    "image": "https://storage.googleapis.com/brandbird/watermarks/f1ff1a59-8c2a-4146-beee-67e00c5bdf50.jpeg",
+    "description": "WordPress news portal with multi-author support and content scheduling.",
+    "details": {
+      "tech_stack": ["WordPress", "PHP", "MySQL", "Elementor"],
+      "features": [
+        "Multi-author management",
+        "Content scheduling",
+        "Newsletter integration",
+        "Advertisement zones",
+        "Breaking news alerts"
+      ],
+      "benefits": [
+        "Real-time content publishing",
+        "Monetization-ready",
+        "SEO optimized structure"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "WordPress based News Portal",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Category-based content organization",
+        "Social media auto-posting",
+        "Subscription management"
+      ],
+      "included_in_sale": [
+        "Complete WordPress installation",
+        "Content database",
+        "Theme and plugin configurations",
+        "Monetization setup",
+        "WordPress export file"
+      ],
+      "reason_for_selling": "Portfolio consolidation, focusing on core properties",
+      "buyer_opportunities": [
+        "Start local news outlet",
+        "Develop niche publication",
+        "Offer news aggregation service"
+      ]
+    },
+    "tags": ["WordPress", "PHP", "MySQL", "Elementor", "News & Magazine", "Content Publishing", "CMS"],
+    "platforms": {
+      "frontend": "WordPress",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for site access and revenue reports. Open to offers.",
+    "category": "News & Magazine",
+    "type": "Wordpress"
+  },
+  {
+    "id": 7,
+    "title": "Organized well-modulated infrastructure \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 493,
+    "posted": "28 May 2025, 20:35:37",
+    "image": "https://img.freepik.com/free-vector/twitter-interface-template_23-2148587406.jpg?semt=ais_hybrid&w=740",
+    "description": "MERN stack news aggregator with personalized content feeds and real-time updates.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "Personalized content feeds",
+        "Real-time news updates",
+        "Category filtering",
+        "User bookmarking",
+        "Social sharing"
+      ],
+      "benefits": [
+        "Highly customizable user experience",
+        "Scalable for large traffic volumes",
+        "Modern reader interface"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based News Platform",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$0",
+        "active_users": 0,
+        "retention_rate": "0%"
+      },
+      "other_notes": [
+        "API integration points for news sources",
+        "Progressive web app capabilities",
+        "User preference tracking"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "API documentation",
+        "Deployment guide",
+        "Database schemas",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Company acquisition, divesting non-core assets",
+      "buyer_opportunities": [
+        "Develop niche news aggregator",
+        "License to media companies",
+        "Add premium subscription features"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "News & Magazine", "Content Aggregation", "Real-time"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Contact for technical specifications and demo access.",
+    "category": "News & Magazine",
+    "type": "MERN"
+  },
+  {
+    "id": 8,
+    "title": "Face-to-face tangible utilization \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 368,
+    "posted": "13 March 2025, 03:42:54",
+    "image": "https://meta-l.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=contain/f1688335722334x262711645998416670/Bubble%20Template.png",
+    "description": "PHP-based news platform with multi-source content aggregation and editorial tools.",
+    "details": {
+      "tech_stack": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "features": [
+        "Multi-source content aggregation",
+        "Editorial workflow tools",
+        "User commenting system",
+        "Subscription management",
+        "Analytics dashboard"
+      ],
+      "benefits": [
+        "Complete editorial control",
+        "Customizable publishing workflow",
+        "Cost-effective hosting"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "PHP based News Platform",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$0",
+        "active_users": 0,
+        "retention_rate": "0%"
+      },
+      "other_notes": [
+        "RSS feed integration",
+        "Content scheduling",
+        "Advertising management"
+      ],
+      "included_in_sale": [
+        "Complete PHP source code",
+        "Database schema",
+        "Installation documentation",
+        "Theme templates",
+        "Database dump"
+      ],
+      "reason_for_selling": "Strategic exit from content business, focusing on SaaS tools",
+      "buyer_opportunities": [
+        "Launch hyperlocal news service",
+        "Develop specialty news portal",
+        "Offer white-label solution"
+      ]
+    },
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap", "News & Magazine", "Content Management", "Publishing"],
+    "platforms": {
+      "frontend": "PHP with Bootstrap",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for demo and code review. Flexible terms available.",
+    "category": "News & Magazine",
+    "type": "PHP"
+  },
+  {
+    "id": 9,
+    "title": "Future-proofed background archive \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 495,
+    "posted": "08 May 2025, 08:55:49",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/1*W4Vy0-bplw0DxbEKB6rkhg.png",
+    "description": "WordPress magazine platform with advanced layout options and subscription management.",
+    "details": {
+      "tech_stack": ["WordPress", "PHP", "MySQL", "Divi"],
+      "features": [
+        "Advanced layout builder",
+        "Digital subscription system",
+        "Premium content paywalls",
+        "Author profiles",
+        "Multi-issue management"
+      ],
+      "benefits": [
+        "Professional magazine presentation",
+        "Monetization-ready features",
+        "Template-based design system"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "WordPress based Magazine",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Print-ready content export",
+        "Advertising management",
+        "Reader engagement tools"
+      ],
+      "included_in_sale": [
+        "Complete WordPress installation",
+        "Premium theme license",
+        "Subscription plugin",
+        "Content migration tools",
+        "WordPress export file"
+      ],
+      "reason_for_selling": "Business model pivot, focusing on digital services",
+      "buyer_opportunities": [
+        "Launch digital magazine startup",
+        "Convert print publications to digital",
+        "Develop niche publication network"
+      ]
+    },
+    "tags": ["WordPress", "PHP", "MySQL", "Divi", "News & Magazine", "Digital Publishing", "Subscription"],
+    "platforms": {
+      "frontend": "WordPress",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Request full demo and financial projections. Serious inquiries only.",
+    "category": "News & Magazine",
+    "type": "Wordpress"
+  },
+  {
+    "id": 10,
+    "title": "Re-contextualized directional orchestration \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 228,
+    "posted": "30 May 2025, 21:54:49",
+    "image": "https://img.freepik.com/free-psd/software-engineer-flyer-template-design_23-2151856370.jpg?uid=R130411112&semt=ais_hybrid&w=740",
+    "description": "PHP business directory with listing management and search functionality.",
+    "details": {
+      "tech_stack": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "features": [
+        "Business listing management",
+        "Advanced search filters",
+        "User reviews system",
+        "Location-based services",
+        "Premium listing options"
+      ],
+      "benefits": [
+        "Local business discovery platform",
+        "Revenue through featured listings",
+        "Community engagement features"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "PHP based Business Directory",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Map integration points",
+        "Claim business functionality",
+        "Analytics dashboard"
+      ],
+      "included_in_sale": [
+        "Complete PHP source code",
+        "Database schema",
+        "Installation documentation",
+        "Payment integration points",
+        "Database dump"
+      ],
+      "reason_for_selling": "Geographic expansion halted, selling regional platform",
+      "buyer_opportunities": [
+        "Localize for specific regions",
+        "Develop vertical-specific directories",
+        "Add lead generation services"
+      ]
+    },
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap", "Business Website", "Directory", "Local SEO"],
+    "platforms": {
+      "frontend": "PHP with Bootstrap",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for demo and technical details. Negotiable pricing.",
+    "category": "Business Website",
+    "type": "PHP"
+  },
+  {
+    "id": 11,
+    "title": "Mandatory logistical application \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 214,
+    "posted": "15 April 2025, 13:47:31",
+    "image": "https://elements-resized.envatousercontent.com/elements-cover-images/53fefc0a-ec0a-49ac-9a2a-2bbe93cad82e?w=433&cf_fit=scale-down&q=85&format=auto&s=f3c23885f05e53a44369c634dc978465840cccaff3e5f15bcd3afa730026cbff",
+    "description": "MERN stack business platform with service management and client portal.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "Service catalog management",
+        "Client portal",
+        "Appointment scheduling",
+        "Billing integration",
+        "Project collaboration"
+      ],
+      "benefits": [
+        "All-in-one business management",
+        "Customizable workflows",
+        "Professional client experience"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based Business Platform",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$500",
+        "active_users": 85,
+        "retention_rate": "47%"
+      },
+      "other_notes": [
+        "Role-based access control",
+        "Document sharing",
+        "Reporting dashboard"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "API documentation",
+        "Deployment guide",
+        "Database schemas",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Product consolidation after merger, selling non-core assets",
+      "buyer_opportunities": [
+        "Specialize for specific industries",
+        "Add premium features",
+        "Develop agency version"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "Business Website", "Client Portal", "SaaS"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Contact for business model details and demo access.",
+    "category": "Business Website",
+    "type": "MERN"
+  },
+  {
+    "id": 12,
+    "title": "Visionary optimizing paradigm \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 391,
+    "posted": "20 April 2025, 21:21:54",
+    "image": "https://cdn.dribbble.com/userupload/37301726/file/original-4f615d09630ab4a642125c626277ea39.png?resize=752x&vertical=center",
+    "description": "WordPress corporate website with service showcase and lead capture.",
+    "details": {
+      "tech_stack": ["WordPress", "PHP", "MySQL", "Elementor"],
+      "features": [
+        "Service showcase galleries",
+        "Client testimonial sections",
+        "Contact and lead forms",
+        "Team management",
+        "Case study portfolio"
+      ],
+      "benefits": [
+        "Professional corporate presence",
+        "Easy content updates",
+        "SEO optimized structure"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "WordPress based Corporate Site",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$0",
+        "active_users": 0,
+        "retention_rate": "0%"
+      },
+      "other_notes": [
+        "Multilingual support",
+        "Integration with CRM systems",
+        "Analytics dashboard"
+      ],
+      "included_in_sale": [
+        "Complete WordPress installation",
+        "Premium theme",
+        "Contact form configurations",
+        "SEO setup",
+        "WordPress export file"
+      ],
+      "reason_for_selling": "Brand consolidation, retiring secondary properties",
+      "buyer_opportunities": [
+        "Sell to marketing agencies",
+        "Offer industry-specific templates",
+        "Develop lead generation services"
+      ]
+    },
+    "tags": ["WordPress", "PHP", "MySQL", "Elementor", "Business Website", "Corporate", "Lead Generation"],
+    "platforms": {
+      "frontend": "WordPress",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for site access and customization options.",
+    "category": "Business Website",
+    "type": "Wordpress"
+  },
+  {
+    "id": 13,
+    "title": "Ameliorated static frame \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 83,
+    "posted": "07 May 2025, 06:47:57",
+    "image": "https://framerusercontent.com/images/i4dFRrRGbtf60NVhiU0tb2q9KuU.jpg",
+    "description": "PHP portfolio platform with project categorization and client testimonial features.",
+    "details": {
+      "tech_stack": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "features": [
+        "Project categorization",
+        "Client testimonial sections",
+        "Skill visualization",
+        "Contact management",
+        "Resume integration"
+      ],
+      "benefits": [
+        "Professional self-presentation",
+        "Customizable without limitations",
+        "Standout from template solutions"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "PHP based Portfolio",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Mobile-responsive design",
+        "Performance optimized",
+        "Easy content updates"
+      ],
+      "included_in_sale": [
+        "Complete PHP source code",
+        "Database schema",
+        "Installation documentation",
+        "Template files",
+        "Database dump"
+      ],
+      "reason_for_selling": "Company rebranding, replacing legacy portfolio system",
+      "buyer_opportunities": [
+        "Target creative professionals",
+        "Offer customization services",
+        "Develop premium template marketplace"
+      ]
+    },
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap", "Portfolio Website", "Creative", "Professional"],
+    "platforms": {
+      "frontend": "PHP with Bootstrap",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Contact for demo and customization options. Flexible pricing.",
+    "category": "Portfolio Website",
+    "type": "PHP"
+  },
+  {
+    "id": 14,
+    "title": "Enterprise-wide dynamic function \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 238,
+    "posted": "03 June 2025, 21:34:54",
+    "image": "https://market-resized.envatousercontent.com/previews/files/637359872/00_Preview.jpg?w=590&h=300&cf_fit=crop&crop=top&format=auto&q=85&s=49fe41ff2ada2e8052350938d3047b14810eb485d610b3f4a8e95a6e22023852",
+    "description": "MERN stack business solution with client management and service analytics.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "Client relationship management",
+        "Service analytics dashboard",
+        "Project tracking",
+        "Invoice management",
+        "Team collaboration"
+      ],
+      "benefits": [
+        "Centralized business operations",
+        "Real-time performance insights",
+        "Customizable workflows"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based Business Solution",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$500",
+        "active_users": 85,
+        "retention_rate": "47%"
+      },
+      "other_notes": [
+        "Role-based permissions",
+        "Integration APIs",
+        "Reporting engine"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "API documentation",
+        "Deployment scripts",
+        "Database schemas",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Strategic focus shift to enterprise market, divesting SMB products",
+      "buyer_opportunities": [
+        "Specialize for specific industries",
+        "Add AI-powered features",
+        "Develop mobile companion app"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "Business Website", "CRM", "Analytics"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Request technical documentation and demo credentials.",
+    "category": "Business Website",
+    "type": "MERN"
+  },
+  {
+    "id": 15,
+    "title": "Stand-alone 4thgeneration approach \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 123,
+    "posted": "05 April 2025, 15:46:24",
+    "image": "https://framerusercontent.com/images/XdqgnRUUlVvvlGp0xwBi5RdPlYQ.png",
+    "description": "WordPress LMS platform with course management and student progress tracking.",
+    "details": {
+      "tech_stack": ["WordPress", "LearnDash", "PHP", "MySQL"],
+      "features": [
+        "Course management system",
+        "Student progress tracking",
+        "Quiz and assessment engine",
+        "Drip content scheduling",
+        "Certificate generation"
+      ],
+      "benefits": [
+        "Complete e-learning solution",
+        "Scalable course delivery",
+        "Monetization-ready features"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "WordPress based LMS",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "Membership integration",
+        "Gamification options",
+        "SCORM compliance"
+      ],
+      "included_in_sale": [
+        "Complete WordPress installation",
+        "LearnDash license",
+        "Course templates",
+        "Student management tools",
+        "WordPress export file"
+      ],
+      "reason_for_selling": "Platform migration to custom solution, selling WordPress version",
+      "buyer_opportunities": [
+        "Start online course business",
+        "Offer corporate training solutions",
+        "Develop niche education marketplace"
+      ]
+    },
+    "tags": ["WordPress", "LearnDash", "PHP", "MySQL", "Learning Management", "e-Learning", "Courses"],
+    "platforms": {
+      "frontend": "WordPress",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for demo and revenue details. Serious buyers only.",
+    "category": "Learning Management",
+    "type": "Wordpress"
+  },
+  {
+    "id": 16,
+    "title": "Pre-emptive 5thgeneration analyzer \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 297,
+    "posted": "22 March 2025, 17:26:39",
+    "image": "https://elements-resized.envatousercontent.com/elements-template-kits-cover-images/files/553163214/preview%20VirtuAI.jpg?w=433&cf_fit=scale-down&q=85&format=auto&s=c2fcbb37195a5551984ec2942f350459773d12084150a14d07a30380b3509d44",
+    "description": "MERN stack portfolio platform with 3D project showcases and interactive elements.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Three.js"],
+      "features": [
+        "3D project showcases",
+        "Interactive timeline",
+        "Skill visualization",
+        "Contact integration",
+        "Performance analytics"
+      ],
+      "benefits": [
+        "Immersive portfolio experience",
+        "Modern technology stack",
+        "High-performance design"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based Portfolio",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$800",
+        "active_users": 120,
+        "retention_rate": "53%"
+      },
+      "other_notes": [
+        "WebGL integration",
+        "Mobile-responsive design",
+        "Animation controls"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "3D component library",
+        "Deployment guide",
+        "Performance optimization",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Business model pivot, focusing on B2B solutions",
+      "buyer_opportunities": [
+        "Target creative industries",
+        "Offer premium templates",
+        "Develop AR integration"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Three.js", "Portfolio Website", "3D", "Interactive"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Contact for technical demo and customization options.",
+    "category": "Portfolio Website",
+    "type": "MERN"
+  },
+  {
+    "id": 17,
+    "title": "User-friendly optimizing alliance \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 323,
+    "posted": "05 January 2025, 00:18:28",
+    "image": "https://cdn.prod.website-files.com/670e899815e8bf4a4cd80556/674dc2b175ec355b9056136f_UX-martech-data-analytics-SaaS.png",
+    "description": "PHP e-commerce solution with multi-vendor marketplace capabilities.",
+    "details": {
+      "tech_stack": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "features": [
+        "Multi-vendor marketplace",
+        "Commission management",
+        "Vendor dashboards",
+        "Product management",
+        "Unified checkout"
+      ],
+      "benefits": [
+        "Complete marketplace solution",
+        "Scalable vendor ecosystem",
+        "Customizable commission structure"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "PHP based Marketplace",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$1200",
+        "active_users": 240,
+        "retention_rate": "68%"
+      },
+      "other_notes": [
+        "Vendor onboarding workflow",
+        "Dispute resolution system",
+        "Multi-tier commission options"
+      ],
+      "included_in_sale": [
+        "Complete PHP source code",
+        "Database schema",
+        "Installation documentation",
+        "Payment gateway integration",
+        "Database dump"
+      ],
+      "reason_for_selling": "Focus shift to niche marketplaces, selling general solution",
+      "buyer_opportunities": [
+        "Develop specialty marketplaces",
+        "Add premium vendor features",
+        "Expand to international markets"
+      ]
+    },
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap", "E-commerce Website", "Marketplace", "Multi-vendor"],
+    "platforms": {
+      "frontend": "PHP with Bootstrap",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for marketplace demo and financials. Negotiable.",
+    "category": "E-commerce Website",
+    "type": "PHP"
+  },
+  {
+    "id": 18,
+    "title": "Synergistic stable paradigm \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 211,
+    "posted": "21 January 2025, 21:49:52",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/0*RYARlOjnbw8TzdMZ",
+    "description": "MERN stack news platform with AI content recommendations and real-time updates.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "AI-powered content recommendations",
+        "Real-time news alerts",
+        "Personalized news feeds",
+        "Social engagement",
+        "Multimedia content support"
+      ],
+      "benefits": [
+        "Highly engaging user experience",
+        "Scalable content delivery",
+        "Modern media interface"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based News Platform",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$0",
+        "active_users": 0,
+        "retention_rate": "0%"
+      },
+      "other_notes": [
+        "Machine learning integration points",
+        "User behavior tracking",
+        "Content personalization engine"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "AI recommendation engine",
+        "API documentation",
+        "Deployment scripts",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Technology pivot, focusing on core AI products",
+      "buyer_opportunities": [
+        "Develop niche news service",
+        "License to media companies",
+        "Add premium subscription model"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "News & Magazine", "AI", "Personalization"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Request technical documentation and demo access.",
+    "category": "News & Magazine",
+    "type": "MERN"
+  },
+  {
+    "id": 19,
+    "title": "Reverse-engineered upward-trending architecture \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 149,
+    "posted": "09 May 2025, 06:25:58",
+    "image": "https://pixelstoplans.com/wp-content/uploads/2023/12/AI-Image-Generator-Comparison-SQUARE-FINAL.jpg",
+    "description": "PHP news aggregator with multi-source content and customizable feeds.",
+    "details": {
+      "tech_stack": ["PHP", "Laravel", "MySQL", "Bootstrap"],
+      "features": [
+        "Multi-source content aggregation",
+        "Customizable news feeds",
+        "User preference profiles",
+        "Content categorization",
+        "Trending topics analysis"
+      ],
+      "benefits": [
+        "Personalized news experience",
+        "Flexible content sourcing",
+        "Cost-effective implementation"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "PHP based News Aggregator",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$500",
+        "active_users": 85,
+        "retention_rate": "47%"
+      },
+      "other_notes": [
+        "RSS and API integration",
+        "Social sharing",
+        "Bookmarking system"
+      ],
+      "included_in_sale": [
+        "Complete PHP source code",
+        "Database schema",
+        "Installation documentation",
+        "Content import tools",
+        "Database dump"
+      ],
+      "reason_for_selling": "Product line consolidation, focusing on premium offerings",
+      "buyer_opportunities": [
+        "Develop niche aggregators",
+        "Add premium content sources",
+        "Create industry-specific news hubs"
+      ]
+    },
+    "tags": ["PHP", "Laravel", "MySQL", "Bootstrap", "News & Magazine", "Content Aggregation", "Customizable"],
+    "platforms": {
+      "frontend": "PHP with Bootstrap",
+      "backend": "PHP",
+      "hosting": "Any shared hosting with PHP and MySQL"
+    },
+    "contact": "Email for demo and customization options. Reasonable offers.",
+    "category": "News & Magazine",
+    "type": "PHP"
+  },
+  {
+    "id": 20,
+    "title": "Reverse-engineered 24hour instruction set \u2013 AI SaaS",
+    "status": "For Sale",
+    "views": 222,
+    "posted": "13 January 2025, 02:19:40",
+    "image": "https://miro.medium.com/v2/resize:fit:1400/1*4fzZa54FB5ErwlYhX5BInw.png",
+    "description": "MERN stack magazine platform with interactive content and subscription management.",
+    "details": {
+      "tech_stack": ["MongoDB", "Express", "React", "Node.js"],
+      "features": [
+        "Interactive content layouts",
+        "Digital subscription management",
+        "Premium content paywalls",
+        "Reader engagement tools",
+        "Analytics dashboard"
+      ],
+      "benefits": [
+        "Modern digital magazine experience",
+        "Flexible content presentation",
+        "Scalable subscription management"
+      ],
+      "project_metrics": {
+        "revenue": "$0",
+        "average_visitors_month": 40,
+        "platform_type": "MERN based Digital Magazine",
+        "downloads": "N/A",
+        "maintenance_time": "2 hours/week",
+        "monthly_revenue": "$1200",
+        "active_users": 240,
+        "retention_rate": "68%"
+      },
+      "other_notes": [
+        "Multimedia content support",
+        "Social sharing integration",
+        "Reader community features"
+      ],
+      "included_in_sale": [
+        "Complete MERN source code",
+        "Subscription management",
+        "API documentation",
+        "Deployment guide",
+        "Postman API collection"
+      ],
+      "reason_for_selling": "Business unit divestment, focusing on core products",
+      "buyer_opportunities": [
+        "Launch digital magazine startup",
+        "Convert print publications",
+        "Develop niche publication network"
+      ]
+    },
+    "tags": ["MongoDB", "Express", "React", "Node.js", "News & Magazine", "Digital Publishing", "Subscription"],
+    "platforms": {
+      "frontend": "React",
+      "backend": "Node.js",
+      "hosting": "Vercel, Heroku, AWS, or any Node.js hosting"
+    },
+    "contact": "Contact for technical specifications and revenue details.",
+    "category": "News & Magazine",
+    "type": "MERN"
+  }
+]

@@ -97,9 +97,8 @@ const RightCoursesDetalis = ({ filteredCourses }) => {
               title={course.title}
               image={course.image}
               category={course.category}
-              rating={course.rating}
               type={course.type}
-              fee={course.fee}
+              details={course.details}
             />
           ))
         ) : (

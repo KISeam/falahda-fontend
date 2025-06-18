@@ -1,4 +1,5 @@
 [
+  { "id": 0, "name": "All" },
   { "id": 1, "name": "E-commerce Website" },
   { "id": 2, "name": "Portfolio Website" },
   { "id": 3, "name": "Blog Website" },

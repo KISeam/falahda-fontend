@@ -44,7 +44,7 @@ const Course = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    fetch("/Course-Data/Courses.json")
+    fetch("/Course-Data/website.json")
       .then((res) => res.json())
       .then((data) => {
         setAllCourses(data);
@@ -134,7 +134,7 @@ const Course = () => {
             }
           ></SectionHeading>
         </div>
-        <div className="w-11/12 md:w-9/11  mx-auto">
+        <div className="w-11/12 md:w-9/11 mx-auto">
           <div>
             {initialLoading ? (
               <div className="flex justify-center items-center h-screen">

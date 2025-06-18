@@ -10,6 +10,7 @@ import RegisterPage from "./Page/Auth/RegisterPage";
 import SingleCourse from "./Page/Single Course/SingleCourse";
 import OurTeam from "./Page/Our Team/OurTeam";
 import Certification from "./Page/Certification/Certification";
+import SingleWebSiteDetails from "./Page/Single WebSite Details/SingleWebSiteDetails";
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
           <Route path="contact" element={<Contact></Contact>}></Route>
           <Route path="login" element={<LoginPage></LoginPage>}></Route>
           <Route path="signup" element={<RegisterPage></RegisterPage>}></Route>
-          <Route path="/courses/:id" element={<SingleCourse />} />
+          {/* <Route path="/courses/:id" element={<SingleCourse />} /> */}
+          <Route path="/courses/:id" element={<SingleWebSiteDetails />} />
           <Route path="our-team" element={ <OurTeam></OurTeam> }></Route>
           <Route path="certification" element={ <Certification /> }></Route>
         </Route>
