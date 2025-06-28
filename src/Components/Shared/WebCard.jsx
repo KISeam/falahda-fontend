@@ -1,114 +1,162 @@
 import React from "react";
 import { BiCategory, BiStar } from "react-icons/bi";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { LuBookOpenCheck } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
-const WebCard = ({
-  id,
-  title,
-  category,
-  type,
-  image,
-  details: {
-    project_metrics: {
-      revenue,
-      average_visitors_month,
-      monthly_revenue,
-      active_users,
-      retention_rate,
+const WebCard = React.memo(
+  ({
+    id,
+    title,
+    category,
+    type,
+    image,
+    details = {
+      project_metrics: {
+        revenue,
+        average_visitors_month,
+        monthly_revenue,
+        active_users,
+        retention_rate,
+      },
+      benefits: [],
     },
-  },
-}) => {
-  const rating = 4.8;
-  const fee = monthly_revenue || "$0";
+    totalSell,
+    price,
+    lastUpdate,
+    totalRating,
+  }) => {
+    const formatSales = (sales) => {
+      if (typeof sales !== "number" || sales <= 0) return "No sales data";
+      return sales >= 1000
+        ? `${(sales / 1000).toFixed(1)}K Sales`
+        : `${sales} Sales`;
+    };
 
-  return (
-    <div className="flex justify-center items-center bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-      <div className="w-full">
-        <div className="bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
-          <div className="flex flex-col md:flex-row">
-            {/* Image Section */}
-            <div className="md:w-2/5 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-blue-600/10 z-10"></div>
-              <img
-                src={
-                  image ||
-                  "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&h=400&q=80"
-                }
-                alt={title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute top-4 right-4 z-20">
-                <span className="bg-gradient-to-r from-teal-500 to-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
-                  {type || "Premium"}
-                </span>
-              </div>
+    return (
+      <div className="p-4 sm:p-5 shadow-md hover:shadow-lg bg-white rounded-lg transition-shadow duration-300">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6">
+          <div className="sm:col-span-1 lg:h-[180px] sm:h-[200px] rounded-lg overflow-hidden relative">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover aspect-[3/2]"
+              loading="lazy"
+              onError={(e) =>
+                (e.target.src = "https://via.placeholder.com/600x400")
+              }
+            />
+            <div className="absolute top-3 left-3 bg-teal-600 text-white text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full shadow-md">
+              {type}
             </div>
-
-            {/* Content Section */}
-            <div className="md:w-3/5 p-6 md:p-8">
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-center text-sm text-gray-500">
-                  <BiCategory className="text-teal-500 mr-1.5" />
-                  <span>{category || "Web Development"}</span>
-                </div>
-                <div className="flex items-center bg-gray-100 px-3 py-1 rounded-full">
-                  <BiStar className="text-yellow-400 mr-1" />
-                  <span className="text-sm font-medium text-gray-700">
-                    {rating}
-                  </span>
-                </div>
+          </div>
+          <div className="sm:col-span-3 flex flex-col sm:flex-row justify-between gap-4">
+            <div className="space-y-3 flex-1">
+              <div className="flex items-center text-xs sm:text-sm text-gray-600">
+                <BiCategory
+                  className="text-teal-500 mr-1.5"
+                  aria-hidden="true"
+                />
+                <span>{category}</span>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-800 mb-4 leading-tight">
-                {title || "Advanced React & Next.js Masterclass"}
+              <h2
+                className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 leading-tight line-clamp-2 overflow-hidden"
+                title={title} // Tooltip for full title on hover
+              >
+                {title}
               </h2>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div>
-                  <p className="text-xs text-gray-500">Course Fee</p>
-                  <p className="text-xl font-bold text-gray-800">{fee}</p>
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Active Users</p>
-                  <p className="text-xl font-bold text-gray-800">
-                    {active_users || 0}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Monthly Visitors</p>
-                  <p className="text-xl font-bold text-gray-800">
-                    {average_visitors_month}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Retention Rate</p>
-                  <p className="text-xl font-bold text-gray-800">
-                    {retention_rate}
-                  </p>
-                </div>
-              </div>
+              <ul className="space-y-2 max-h-[80px] sm:max-h-[100px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300">
+                {details.benefits.length > 0 ? (
+                  details.benefits.slice(0, 3).map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="bg-teal-100 p-1 rounded-full mt-1 mr-2 sm:mr-3">
+                        <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                      </div>
+                      <span className="text-gray-700 text-xs sm:text-sm">
+                        {benefit}
+                      </span>
+                    </li>
+                  ))
+                ) : (
+                  <li className="text-gray-500 text-xs sm:text-sm">
+                    No benefits listed
+                  </li>
+                )}
+              </ul>
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100">
-                <Link
-                  to={`/courses/${id}`}
-                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg"
+            <div className="sm:border-l-2 border-gray-300 sm:pl-4 flex flex-col items-start sm:items-center justify-between">
+              <div className="space-y-2 w-full">
+                <h3 className="text-center font-semibold text-gray-900 text-base sm:text-lg">
+                  ${Number(price).toFixed(2)}
+                </h3>
+                <div
+                  className="flex justify-center gap-1 sm:gap-2"
+                  aria-label={`Rating: ${totalRating} out of 5 stars`}
                 >
-                  <LuBookOpenCheck className="text-lg" />
-                  <span>View Course Details</span>
-                </Link>
-                <button className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:border-teal-500 hover:text-teal-600">
-                  <FaWhatsapp className="text-lg text-green-500" />
-                  <span>Enroll via WhatsApp</span>
-                </button>
+                  {[...Array(5)].map((_, i) => {
+                    const ratingValue = i + 1;
+                    return (
+                      <span key={i}>
+                        {totalRating >= ratingValue ? (
+                          <FaStar
+                            className="text-yellow-500 w-4 h-4"
+                            aria-hidden="true"
+                          />
+                        ) : totalRating >= ratingValue - 0.5 ? (
+                          <FaStarHalfAlt
+                            className="text-yellow-500 w-4 h-4"
+                            aria-hidden="true"
+                          />
+                        ) : (
+                          <BiStar
+                            className="text-gray-300 w-4 h-4"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </span>
+                    );
+                  })}
+                  <span className="text-xs sm:text-sm font-medium text-gray-600 ml-1">
+                    ({totalRating.toFixed(1)})
+                  </span>
+                </div>
+
+                <p className="text-center text-xs sm:text-sm font-medium text-gray-600">
+                  {formatSales(totalSell)}
+                </p>
+                <p className="text-center text-xs sm:text-sm font-medium text-gray-600">
+                  Last Update: {lastUpdate || "N/A"}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-3 w-full">
+                  <Link
+                    to={`/courses/${id}`}
+                    className="flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
+                    aria-label={`View details for ${title}`}
+                  >
+                    <LuBookOpenCheck
+                      className="text-base sm:text-lg"
+                      aria-hidden="true"
+                    />
+                    <span className="text-xs sm:text-sm">Course Details</span>
+                  </Link>
+                  <button
+                    className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:border-teal-500 hover:text-teal-600 cursor-pointer"
+                    aria-label={`Buy ${title} course`}
+                  >
+                    <span className="text-xs sm:text-sm">Buy Now</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default WebCard;

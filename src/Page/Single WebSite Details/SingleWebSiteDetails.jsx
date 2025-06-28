@@ -111,12 +111,12 @@ const SingleWebSiteDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-[#f0fdfc] py-12">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-[#f0fdfc] py-12 open_sans">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="bg-white rounded-2xl p-8 shadow-lg mb-10">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-2/5">
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="lg:w-2/5">
               <img
                 src={project.image}
                 alt={project.title}
@@ -158,9 +158,9 @@ const SingleWebSiteDetails = () => {
               </div>
             </div>
 
-            <div className="md:w-3/5">
+            <div className="lg:w-3/5 md:h-full">
               <div className="flex justify-between items-start">
-                <h1 className="text-3xl font-bold text-gray-800 mb-4">
+                <h1 className="text-2xl font-bold text-gray-800 mb-4">
                   {project.title}
                 </h1>
                 <span className="bg-[#41bfb8] text-white text-xs px-3 py-1 rounded-full font-medium">
@@ -200,7 +200,7 @@ const SingleWebSiteDetails = () => {
                   <div>
                     <div className="text-sm opacity-80">Monthly Revenue</div>
                     <div className="font-bold text-xl">
-                      {project.details.project_metrics.monthly_revenue}
+                      {project.details.project_metrics.monthly_revenue}$
                     </div>
                   </div>
                   <div>
@@ -212,7 +212,7 @@ const SingleWebSiteDetails = () => {
                   <div>
                     <div className="text-sm opacity-80">Retention Rate</div>
                     <div className="font-bold text-xl">
-                      {project.details.project_metrics.retention_rate}
+                      {project.details.project_metrics.retention_rate}%
                     </div>
                   </div>
                 </div>
@@ -234,6 +234,22 @@ const SingleWebSiteDetails = () => {
                     <FaCheck className="text-white" size={10} />
                   </div>
                   <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* Main Function */}
+          {renderSection(
+            "Main Functions",
+            <FaListUl size={20} />,
+            <ul className="space-y-3">
+              {project.mainFunction.map((mainFunction, index) => (
+                <li key={index} className="flex items-start">
+                  <div className="bg-[#41bfb8] p-1 rounded-full mt-1 mr-3 flex items-center justify-center">
+                    <FaCheck className="text-white" size={10} />
+                  </div>
+                  <span className="text-gray-700">{mainFunction}</span>
                 </li>
               ))}
             </ul>
@@ -271,85 +287,6 @@ const SingleWebSiteDetails = () => {
             </ul>
           )}
 
-          {/* Buyer Opportunities */}
-          {renderSection(
-            "Growth Opportunities",
-            <FaDollarSign size={20} />,
-            <ul className="space-y-3">
-              {project.details.buyer_opportunities.map((opportunity, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="bg-[#e8f9f8] p-1 rounded-full mt-1 mr-3">
-                    <div className="w-2 h-2 bg-[#41bfb8] rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">{opportunity}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {/* Included in Sale */}
-          {renderSection(
-            "Included in Sale",
-            <FaBoxOpen size={20} />,
-            <ul className="space-y-3">
-              {project.details.included_in_sale.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="bg-[#e8f9f8] p-1 rounded-full mt-1 mr-3">
-                    <div className="w-2 h-2 bg-[#41bfb8] rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {/* Project Metrics */}
-          {renderSection(
-            "Performance Metrics",
-            <FaClipboardList size={20} />,
-            <div className="grid grid-cols-2 gap-4">
-              {Object.entries(project.details.project_metrics).map(
-                ([key, value], index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-50 p-4 rounded-lg border border-gray-100"
-                  >
-                    <div className="text-sm text-gray-500 uppercase tracking-wide">
-                      {key.replace(/_/g, " ")}
-                    </div>
-                    <div className="text-lg font-semibold text-gray-800">
-                      {value}
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
-          )}
-
-          {/* Other Notes */}
-          {renderSection(
-            "Additional Information",
-            <FaCommentAlt size={20} />,
-            <ul className="space-y-3">
-              {project.details.other_notes.map((note, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="bg-[#e8f9f8] p-1 rounded-full mt-1 mr-3">
-                    <div className="w-2 h-2 bg-[#41bfb8] rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">{note}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {/* Reason for Selling */}
-          {renderSection(
-            "Reason for Selling",
-            <FaLightbulb size={20} />,
-            <p className="text-gray-700 italic border-l-4 border-[#41bfb8] pl-4 py-1">
-              {project.details.reason_for_selling}
-            </p>
-          )}
         </div>
 
         {/* Contact Section */}
@@ -365,11 +302,11 @@ const SingleWebSiteDetails = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#41bfb8] hover:bg-[#3aaca5] text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center justify-center">
+              <button className="bg-[#41bfb8] hover:bg-[#3aaca5] text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center justify-center cursor-pointer">
                 <FaEnvelope className="mr-2" />
                 Contact Seller
               </button>
-              <button className="border-2 border-[#41bfb8] text-[#41bfb8] hover:bg-[#f0fdfc] font-medium py-3 px-8 rounded-lg transition-colors">
+              <button className="border-2 border-[#41bfb8] text-[#41bfb8] hover:bg-[#f0fdfc] font-medium py-3 px-8 rounded-lg transition-colors cursor-pointer">
                 Request Documentation
               </button>
             </div>

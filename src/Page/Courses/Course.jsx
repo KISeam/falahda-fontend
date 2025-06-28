@@ -13,7 +13,9 @@ const Course = () => {
   const [loadMoreLoading, setLoadMoreLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedRating, setSelectedRating] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
   const coursesPerPage = 10;
   const detailsRef = useRef(null);
   const [scrollY, setScrollY] = useState(0);
@@ -32,14 +34,16 @@ const Course = () => {
   useEffect(() => {
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
+    const ratingParam = searchParams.get("rating");
 
     if (categoryParam) {
       setSelectedCategories(decodeURIComponent(categoryParam));
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-
     if (searchParam) {
       setSearchQuery(decodeURIComponent(searchParam));
+    }
+    if (ratingParam) {
+      setSelectedRating(Number(ratingParam));
     }
   }, [searchParams]);
 
@@ -47,16 +51,26 @@ const Course = () => {
     fetch("/Course-Data/website.json")
       .then((res) => res.json())
       .then((data) => {
-        setAllCourses(data);
-        setCourses(data.slice(0, coursesPerPage));
+        const normalizedData = data.map((course) => ({
+          ...course,
+          totalRating: Number(course.totalRating) || 0,
+        }));
+        setAllCourses(normalizedData);
+        setCourses(normalizedData.slice(0, coursesPerPage));
         setInitialLoading(false);
-      });
+        console.log(
+          "Unique ratings:",
+          [...new Set(normalizedData.map((course) => course.totalRating))]
+        );
+      })
+      .catch((error) => console.error("Error fetching courses:", error));
   }, []);
 
   useEffect(() => {
     fetch("/Course-Data/websiteCategory.json")
       .then((res) => res.json())
-      .then((data) => setCourseCategories(data));
+      .then((data) => setCourseCategories(data))
+      .catch((error) => console.error("Error fetching categories:", error));
   }, []);
 
   const handleCheckboxChange = (categoryName) => {
@@ -65,6 +79,9 @@ const Course = () => {
     params.set("category", encodeURIComponent(categoryName));
     if (searchQuery) {
       params.set("search", encodeURIComponent(searchQuery));
+    }
+    if (selectedRating) {
+      params.set("rating", selectedRating);
     }
     setSearchParams(params);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -79,7 +96,33 @@ const Course = () => {
     if (query) {
       params.set("search", encodeURIComponent(query));
     }
+    if (selectedRating) {
+      params.set("rating", selectedRating);
+    }
     setSearchParams(params);
+  };
+
+  const handleRatingChange = (rating) => {
+    const newRating = rating === selectedRating ? null : rating;
+    setSelectedRating(newRating);
+    const params = new URLSearchParams();
+    if (selectedCategories !== "All") {
+      params.set("category", encodeURIComponent(selectedCategories));
+    }
+    if (searchQuery) {
+      params.set("search", encodeURIComponent(searchQuery));
+    }
+    if (newRating) {
+      params.set("rating", newRating);
+    }
+    setSearchParams(params);
+  };
+
+  const resetFilters = () => {
+    setSelectedCategories("All");
+    setSearchQuery("");
+    setSelectedRating(null);
+    setSearchParams({});
   };
 
   const filteredcourses = allCourses.filter((course) => {
@@ -91,15 +134,18 @@ const Course = () => {
       (course.title &&
         course.title.toLowerCase().includes(searchQuery.toLowerCase())) ||
       (course.specialization &&
-        course.specialization
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase()));
+        course.specialization.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    return categoryMatch && searchMatch;
+    const ratingMatch =
+      selectedRating === null || course.totalRating >= selectedRating;
+
+    return categoryMatch && searchMatch && ratingMatch;
   });
 
   const displayedcourses =
-    selectedCategories === "All" && searchQuery === ""
+    selectedCategories === "All" &&
+    searchQuery === "" &&
+    selectedRating === null
       ? courses
       : filteredcourses;
 
@@ -130,18 +176,18 @@ const Course = () => {
           <SectionHeading
             title={"Discover Your Next Skill"}
             description={
-              "Unlock a variety of practical and in-demand courses tailored to your career goals. Whether you're starting fresh or aiming higher, our learning paths are made to guide you every step of the way.Each course is crafted by industry experts to ensure you gain real-world skills that make a difference."
+              "Unlock a variety of practical and in-demand courses tailored to your career goals. Whether you're starting fresh or aiming higher, our learning paths are made to guide you every step of the way. Each course is crafted by industry experts to ensure you gain real-world skills that make a difference."
             }
           ></SectionHeading>
         </div>
-        <div className="w-11/12 md:w-9/11 mx-auto">
+        <div className="lg:w-9/11 mx-auto px-4 lg:px-0">
           <div>
             {initialLoading ? (
               <div className="flex justify-center items-center h-screen">
                 <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#F79952]"></div>
               </div>
             ) : (
-              <div className="flex flex-col-reverse lg:flex-row gap-4">
+              <div className="flex flex-col lg:flex-row gap-4">
                 <div className="w-full lg:w-[20%] lg:sticky lg:top-24 lg:self-start">
                   <LeftCategory
                     courseCategories={courseCategories}
@@ -149,6 +195,11 @@ const Course = () => {
                     handleCheckboxChange={handleCheckboxChange}
                     searchQuery={searchQuery}
                     onSearch={handleSearch}
+                    selectedRating={selectedRating}
+                    onRatingChange={handleRatingChange}
+                    showMobileFilters={showMobileFilters}
+                    setShowMobileFilters={setShowMobileFilters}
+                    resetFilters={resetFilters}
                   />
                 </div>
                 <div
@@ -156,9 +207,14 @@ const Course = () => {
                   ref={detailsRef}
                   style={{ transform: getTransformValue() }}
                 >
-                  <RightCoursesDetalis filteredCourses={displayedcourses} />
+                  <RightCoursesDetalis
+                    filteredCourses={displayedcourses}
+                    selectedRating={selectedRating}
+                    onRatingChange={handleRatingChange}
+                  />
                   {selectedCategories === "All" &&
                     searchQuery === "" &&
+                    selectedRating === null &&
                     allCourses.length > courses.length && (
                       <div className="flex justify-center my-3">
                         <button
@@ -166,7 +222,7 @@ const Course = () => {
                           disabled={loadMoreLoading}
                           className={`px-6 py-2 cursor-pointer ${
                             loadMoreLoading
-                              ? "bg-[#F79952]cursor-not-allowed"
+                              ? "bg-[#F79952] cursor-not-allowed"
                               : "bg-[#f2a56a] hover:bg-[#F79952]"
                           } text-white rounded-lg transition duration-300`}
                         >
