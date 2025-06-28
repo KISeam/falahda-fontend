@@ -14,6 +14,9 @@ const Course = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRating, setSelectedRating] = useState(null);
+  const [selectedPriceRange, setSelectedPriceRange] = useState("all");
+  const [minPrice, setMinPrice] = useState(null);
+  const [maxPrice, setMaxPrice] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const coursesPerPage = 10;
@@ -35,6 +38,9 @@ const Course = () => {
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
     const ratingParam = searchParams.get("rating");
+    const priceRangeParam = searchParams.get("priceRange");
+    const minPriceParam = searchParams.get("minPrice");
+    const maxPriceParam = searchParams.get("maxPrice");
 
     if (categoryParam) {
       setSelectedCategories(decodeURIComponent(categoryParam));
@@ -45,6 +51,15 @@ const Course = () => {
     if (ratingParam) {
       setSelectedRating(Number(ratingParam));
     }
+    if (priceRangeParam) {
+      setSelectedPriceRange(decodeURIComponent(priceRangeParam));
+    }
+    if (minPriceParam) {
+      setMinPrice(Number(minPriceParam));
+    }
+    if (maxPriceParam) {
+      setMaxPrice(Number(maxPriceParam));
+    }
   }, [searchParams]);
 
   useEffect(() => {
@@ -54,6 +69,7 @@ const Course = () => {
         const normalizedData = data.map((course) => ({
           ...course,
           totalRating: Number(course.totalRating) || 0,
+          price: Number(course.price) || 0,
         }));
         setAllCourses(normalizedData);
         setCourses(normalizedData.slice(0, coursesPerPage));
@@ -61,6 +77,10 @@ const Course = () => {
         console.log(
           "Unique ratings:",
           [...new Set(normalizedData.map((course) => course.totalRating))]
+        );
+        console.log(
+          "Unique prices:",
+          [...new Set(normalizedData.map((course) => course.price))]
         );
       })
       .catch((error) => console.error("Error fetching courses:", error));
@@ -83,6 +103,15 @@ const Course = () => {
     if (selectedRating) {
       params.set("rating", selectedRating);
     }
+    if (selectedPriceRange) {
+      params.set("priceRange", encodeURIComponent(selectedPriceRange));
+    }
+    if (minPrice !== null) {
+      params.set("minPrice", minPrice);
+    }
+    if (maxPrice !== null) {
+      params.set("maxPrice", maxPrice);
+    }
     setSearchParams(params);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -98,6 +127,15 @@ const Course = () => {
     }
     if (selectedRating) {
       params.set("rating", selectedRating);
+    }
+    if (selectedPriceRange) {
+      params.set("priceRange", encodeURIComponent(selectedPriceRange));
+    }
+    if (minPrice !== null) {
+      params.set("minPrice", minPrice);
+    }
+    if (maxPrice !== null) {
+      params.set("maxPrice", maxPrice);
     }
     setSearchParams(params);
   };
@@ -115,6 +153,79 @@ const Course = () => {
     if (newRating) {
       params.set("rating", newRating);
     }
+    if (selectedPriceRange) {
+      params.set("priceRange", encodeURIComponent(selectedPriceRange));
+    }
+    if (minPrice !== null) {
+      params.set("minPrice", minPrice);
+    }
+    if (maxPrice !== null) {
+      params.set("maxPrice", maxPrice);
+    }
+    setSearchParams(params);
+  };
+
+  const handlePriceRangeChange = (range) => {
+    setSelectedPriceRange(range);
+    setMinPrice(null);
+    setMaxPrice(null);
+    const params = new URLSearchParams();
+    if (selectedCategories !== "All") {
+      params.set("category", encodeURIComponent(selectedCategories));
+    }
+    if (searchQuery) {
+      params.set("search", encodeURIComponent(searchQuery));
+    }
+    if (selectedRating) {
+      params.set("rating", selectedRating);
+    }
+    if (range) {
+      params.set("priceRange", encodeURIComponent(range));
+    }
+    setSearchParams(params);
+  };
+
+  const handleMinPriceChange = (value) => {
+    setMinPrice(value);
+    setSelectedPriceRange(null);
+    const params = new URLSearchParams();
+    if (selectedCategories !== "All") {
+      params.set("category", encodeURIComponent(selectedCategories));
+    }
+    if (searchQuery) {
+      params.set("search", encodeURIComponent(searchQuery));
+    }
+    if (selectedRating) {
+      params.set("rating", selectedRating);
+    }
+    if (value !== null) {
+      params.set("minPrice", value);
+    }
+    if (maxPrice !== null) {
+      params.set("maxPrice", maxPrice);
+    }
+    setSearchParams(params);
+  };
+
+  const handleMaxPriceChange = (value) => {
+    setMaxPrice(value);
+    setSelectedPriceRange(null);
+    const params = new URLSearchParams();
+    if (selectedCategories !== "All") {
+      params.set("category", encodeURIComponent(selectedCategories));
+    }
+    if (searchQuery) {
+      params.set("search", encodeURIComponent(searchQuery));
+    }
+    if (selectedRating) {
+      params.set("rating", selectedRating);
+    }
+    if (minPrice !== null) {
+      params.set("minPrice", minPrice);
+    }
+    if (value !== null) {
+      params.set("maxPrice", value);
+    }
     setSearchParams(params);
   };
 
@@ -122,6 +233,9 @@ const Course = () => {
     setSelectedCategories("All");
     setSearchQuery("");
     setSelectedRating(null);
+    setSelectedPriceRange("all");
+    setMinPrice(null);
+    setMaxPrice(null);
     setSearchParams({});
   };
 
@@ -139,13 +253,40 @@ const Course = () => {
     const ratingMatch =
       selectedRating === null || course.totalRating >= selectedRating;
 
-    return categoryMatch && searchMatch && ratingMatch;
+    let priceMatch = true;
+    if (selectedPriceRange || minPrice !== null || maxPrice !== null) {
+      const coursePrice = Number(course.price) || 0;
+      if (selectedPriceRange) {
+        if (selectedPriceRange === "free") {
+          priceMatch = coursePrice === 0;
+        } else if (selectedPriceRange === "0-50") {
+          priceMatch = coursePrice > 0 && coursePrice <= 50;
+        } else if (selectedPriceRange === "50-100") {
+          priceMatch = coursePrice > 50 && coursePrice <= 100;
+        } else if (selectedPriceRange === "100+") {
+          priceMatch = coursePrice > 100;
+        }
+      } else {
+        if (minPrice !== null && maxPrice !== null) {
+          priceMatch = coursePrice >= minPrice && coursePrice <= maxPrice;
+        } else if (minPrice !== null) {
+          priceMatch = coursePrice >= minPrice;
+        } else if (maxPrice !== null) {
+          priceMatch = coursePrice <= maxPrice;
+        }
+      }
+    }
+
+    return categoryMatch && searchMatch && ratingMatch && priceMatch;
   });
 
   const displayedcourses =
     selectedCategories === "All" &&
     searchQuery === "" &&
-    selectedRating === null
+    selectedRating === null &&
+    selectedPriceRange === "all" &&
+    minPrice === null &&
+    maxPrice === null
       ? courses
       : filteredcourses;
 
@@ -200,6 +341,12 @@ const Course = () => {
                     showMobileFilters={showMobileFilters}
                     setShowMobileFilters={setShowMobileFilters}
                     resetFilters={resetFilters}
+                    selectedPriceRange={selectedPriceRange}
+                    onPriceRangeChange={handlePriceRangeChange}
+                    minPrice={minPrice}
+                    maxPrice={maxPrice}
+                    onMinPriceChange={handleMinPriceChange}
+                    onMaxPriceChange={handleMaxPriceChange}
                   />
                 </div>
                 <div
@@ -215,6 +362,9 @@ const Course = () => {
                   {selectedCategories === "All" &&
                     searchQuery === "" &&
                     selectedRating === null &&
+                    selectedPriceRange === "all" &&
+                    minPrice === null &&
+                    maxPrice === null &&
                     allCourses.length > courses.length && (
                       <div className="flex justify-center my-3">
                         <button

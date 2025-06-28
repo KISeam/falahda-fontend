@@ -141,7 +141,7 @@ const WebCard = React.memo(
                       className="text-base sm:text-lg"
                       aria-hidden="true"
                     />
-                    <span className="text-xs sm:text-sm">Course Details</span>
+                    <span className="text-xs sm:text-sm">View Details</span>
                   </Link>
                   <button
                     className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:border-teal-500 hover:text-teal-600 cursor-pointer"

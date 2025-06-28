@@ -13,6 +13,12 @@ const LeftCategory = ({
   showMobileFilters,
   setShowMobileFilters,
   resetFilters,
+  selectedPriceRange,
+  onPriceRangeChange,
+  minPrice,
+  maxPrice,
+  onMinPriceChange,
+  onMaxPriceChange,
 }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,6 +27,14 @@ const LeftCategory = ({
   const handleSearchChange = (e) => {
     onSearch(e.target.value);
   };
+
+  const priceRanges = [
+    { label: "All", value: "all" },
+    { label: "Free", value: "free" },
+    { label: "$0 - $50", value: "0-50" },
+    { label: "$50 - $100", value: "50-100" },
+    { label: "$100+", value: "100+" },
+  ];
 
   const filterContent = (
     <div className="w-full space-y-6 p-4 rounded-xl shadow-lg">
@@ -60,6 +74,35 @@ const LeftCategory = ({
                 onChange={() => handleCheckboxChange(category.name)}
               />
               <span className="text-base font-medium">{category.name}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Price Filter Section */}
+      <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+        <h3 className="text-lg md:text-xl font-semibold text-gray-800 bg-gray-50 px-6 py-4 border-b border-gray-200">
+          Price
+        </h3>
+        <div className="flex flex-col gap-3 p-5">
+          {/* Radio Buttons for Predefined Price Ranges */}
+          {priceRanges.map((range) => (
+            <label
+              key={range.value}
+              className={`flex items-center gap-3 cursor-pointer ${
+                selectedPriceRange === range.value
+                  ? "text-[#F79952] font-medium"
+                  : "text-gray-700 hover:text-[#F79952]"
+              }`}
+            >
+              <input
+                type="checkbox"
+                name="priceRange"
+                className="checkbox w-5 h-5 rounded-sm"
+                checked={selectedPriceRange === range.value}
+                onChange={() => onPriceRangeChange(range.value)}
+              />
+              <span className="text-base font-medium">{range.label}</span>
             </label>
           ))}
         </div>
@@ -158,7 +201,6 @@ const LeftCategory = ({
         </div>
       ) : (
         <>
-          {/* Professional mobile filter toggle button */}
           <div className="lg:hidden flex items-center justify-between mb-6 bg-white rounded-xl shadow-sm py-3 px-5 border border-gray-100 hover:shadow-md transition-shadow duration-300">
             <span className="text-gray-700 text-base font-medium tracking-tight">
               Filter Courses
@@ -185,7 +227,6 @@ const LeftCategory = ({
               <span>Filter</span>
             </button>
           </div>
-          {/* Filter content for large devices */}
           <div className="hidden lg:block">{filterContent}</div>
         </>
       )}
