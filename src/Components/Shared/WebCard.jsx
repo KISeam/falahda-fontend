@@ -10,7 +10,7 @@ const WebCard = React.memo(
     title,
     category,
     type,
-    image,
+    mainImage,
     details = {
       project_metrics: {
         revenue,
@@ -38,7 +38,7 @@ const WebCard = React.memo(
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6">
           <div className="sm:col-span-1 lg:h-[180px] sm:h-[200px] rounded-lg overflow-hidden relative">
             <img
-              src={image}
+              src={mainImage}
               alt={title}
               className="w-full h-full object-cover aspect-[3/2]"
               loading="lazy"

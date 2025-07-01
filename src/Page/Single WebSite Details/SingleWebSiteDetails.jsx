@@ -118,7 +118,7 @@ const SingleWebSiteDetails = () => {
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="lg:w-2/5">
               <img
-                src={project.image}
+                src={project.mainImage}
                 alt={project.title}
                 className="rounded-xl w-full h-64 object-cover shadow-lg border-4 border-white"
               />
@@ -223,37 +223,65 @@ const SingleWebSiteDetails = () => {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-          {/* Features */}
-          {renderSection(
-            "Key Features",
-            <FaListUl size={20} />,
-            <ul className="space-y-3">
-              {project.details.features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="bg-[#41bfb8] p-1 rounded-full mt-1 mr-3 flex items-center justify-center">
-                    <FaCheck className="text-white" size={10} />
-                  </div>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+          <div className="h-[400px] rounded-xl overflow-y-scroll">
+            {/* Features */}
+            {renderSection(
+              "Key Features",
+              <FaListUl size={20} />,
+              <ul className="space-y-3">
+                {project.details.features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="bg-[#41bfb8] p-1 rounded-full mt-1 mr-3 flex items-center justify-center">
+                      <FaCheck className="text-white" size={10} />
+                    </div>
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>,
+              true // make it scrollable
+            )}
+          </div>
 
-          {/* Main Function */}
-          {renderSection(
-            "Main Functions",
-            <FaListUl size={20} />,
-            <ul className="space-y-3">
-              {project.mainFunction.map((mainFunction, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="bg-[#41bfb8] p-1 rounded-full mt-1 mr-3 flex items-center justify-center">
-                    <FaCheck className="text-white" size={10} />
-                  </div>
-                  <span className="text-gray-700">{mainFunction}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+          <div className="h-[400px] rounded-xl overflow-hidden">
+            <iframe
+              width="100%"
+              height="100%"
+              src={project.video}
+              className="w-full h-full rounded-xl"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div className="h-[400px] rounded-xl overflow-hidden">
+            <img
+              src={project.secondImage}
+              alt=""
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+          
+          <div className="h-[400px] rounded-xl overflow-y-scroll">
+            {/* Main Function */}
+            {renderSection(
+              "Main Functions",
+              <FaListUl size={20} />,
+              <ul className="space-y-3">
+                {project.mainFunction.map((mainFunction, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="bg-[#41bfb8] p-1 rounded-full mt-1 mr-3 flex items-center justify-center">
+                      <FaCheck className="text-white" size={10} />
+                    </div>
+                    <span className="text-gray-700">{mainFunction}</span>
+                  </li>
+                ))}
+              </ul>,
+              true // make it scrollable
+            )}
+          </div>
+
 
           {/* Tech Stack */}
           {renderSection(
@@ -286,7 +314,6 @@ const SingleWebSiteDetails = () => {
               ))}
             </ul>
           )}
-
         </div>
 
         {/* Contact Section */}

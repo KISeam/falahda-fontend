@@ -31,10 +31,8 @@ const Navbar = () => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/courses", label: "Build Your Website" },
-    { to: "/events", label: "Course" },
-    { to: "/our-team", label: "Components" },
     { to: "/about", label: "About" },
-    // { to: "/contact", label: "Contact" },
+    { to: "/contact", label: "Contact" },
 
     // { to: "/certification", label: "Certification" }
   ];
