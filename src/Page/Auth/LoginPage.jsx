@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiFacebookFill } from "react-icons/ri";
 import { FaGoogle } from "react-icons/fa";
@@ -7,6 +7,10 @@ import Image from '../../assets/img/Login Image.png'
 
 
 function LoginPage() {
+  useEffect(() => {
+      window.scroll(0, 0);
+    }, []);
+    
   return (
     <div className="py-20 bg-gray-100">
   <div className="w-11/12 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">

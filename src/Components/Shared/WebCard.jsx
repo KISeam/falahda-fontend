@@ -133,7 +133,7 @@ const WebCard = React.memo(
 
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-3 w-full">
                   <Link
-                    to={`/courses/${id}`}
+                    to={`/web_site/${id}`}
                     className="flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
                     aria-label={`View details for ${title}`}
                   >

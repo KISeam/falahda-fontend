@@ -1,16 +1,16 @@
-import React from 'react';
-import AboutHero from './AboutComponents/AboutHero';
-
-
-
+import React, { useEffect } from "react";
+import AboutHero from "./AboutComponents/AboutHero";
 
 const About = () => {
-    return (
-        <div>
-             <AboutHero></AboutHero>
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
-        </div>
-    );
+  return (
+    <div>
+      <AboutHero></AboutHero>
+    </div>
+  );
 };
 
 export default About;

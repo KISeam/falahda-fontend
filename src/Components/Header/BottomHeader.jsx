@@ -37,9 +37,9 @@ const BottomHeader = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/courses", label: "Build Your Website" },
+    { to: "/web_site", label: "Build Your Website" },
     { to: "/about", label: "About" },
-    { to: "/contact", label: "Contact" }
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -69,7 +69,7 @@ const BottomHeader = () => {
                     {categories.map((category, index) => (
                       <li key={index}>
                         <Link
-                          to={`/courses?category=${encodeURIComponent(
+                          to={`/web_site?category=${encodeURIComponent(
                             category
                           )}`}
                           className="cursor-pointer"
@@ -93,7 +93,7 @@ const BottomHeader = () => {
                     to={to}
                     className={({ isActive }) =>
                       `relative pb-1 transition-all duration-300 
-                                  hover:text-[#41bfb8] text-[16px] poppins text-white
+                                  hover:text-[#41bfb8] text-[16px] poppins
                                   ${
                                     isActive
                                       ? "text-[#00DDB3] after:scale-x-100"
@@ -111,7 +111,7 @@ const BottomHeader = () => {
             </div>
 
             <div>
-              <Link to="/courses">
+              <Link to="/web_site">
                 {" "}
                 <div className="hidden lg:block">
                   <div className="flex gap-2 text-xl items-center bg-[#41bfb8] px-4 py-2 rounded-md cursor-pointer transition-all hover:brightness-110">

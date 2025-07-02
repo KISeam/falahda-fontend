@@ -223,7 +223,7 @@ const SingleWebSiteDetails = () => {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-          <div className="h-[400px] rounded-xl overflow-y-scroll">
+          <div className="h-[400px] rounded-xl overflow-y-scroll [scrollbar-width:none] [-ms-overflow-style:none]">
             {/* Features */}
             {renderSection(
               "Key Features",
@@ -263,7 +263,7 @@ const SingleWebSiteDetails = () => {
             />
           </div>
           
-          <div className="h-[400px] rounded-xl overflow-y-scroll">
+          <div className="h-[400px] rounded-xl overflow-y-scroll [scrollbar-width:none] [-ms-overflow-style:none]">
             {/* Main Function */}
             {renderSection(
               "Main Functions",

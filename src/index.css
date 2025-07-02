@@ -169,3 +169,20 @@ p {
 .animate-float-slowest { animation: float-slowest 8s ease-in-out infinite; }
 .animate-pulse-slow { animation: pulse 6s ease-in-out infinite; }
 .animate-pulse-medium { animation: pulse 4s ease-in-out infinite; }
+
+/* For Webkit browsers (Chrome, Safari) */
+.overflow-y-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Fallback for Firefox */
+[scrollbar-width=none] {
+  scrollbar-width: none;
+}
+
+/* Fallback for IE/Edge */
+[-ms-overflow-style=none] {
+  -ms-overflow-style: none;
+}

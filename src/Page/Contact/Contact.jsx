@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -40,6 +40,10 @@ const Contact = () => {
     setErrors({});
     setTimeout(() => setIsSubmitted(false), 3000);
   };
+
+  useEffect(() => {
+      window.scroll(0, 0);
+    }, []);
 
   return (
     <div className="bg-gradient-to-b from-gray-100 to-gray-200 flex flex-col">

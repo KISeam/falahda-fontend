@@ -29,11 +29,11 @@ const HomeCategory = () => {
   ];
   
   return (
-    <div className="flex justify-center font-poppins my-16 gap-8 flex-wrap">
+    <div className="flex justify-center font-poppins py-16 gap-8 flex-wrap bg-white">
     {categories.map((category, index) => (
       <div
         key={index}
-        className="flex w-72 justify-center flex-col items-center border border-[#e6e6e6] py-9 rounded-xl"
+        className="flex w-72 justify-center flex-col items-center border border-[#e6e6e6] py-9 rounded-xl text-black"
       >
         {category.icon}
         <p className="text-2xl font-semibold mt-6 mb-2 outfit">{category.title}</p>

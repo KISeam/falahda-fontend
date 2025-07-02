@@ -28,7 +28,7 @@ const Navbar = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/courses", label: "Build Your Website" },
+    { to: "/web_site", label: "Build Your Website" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
@@ -70,7 +70,7 @@ const Navbar = () => {
               ))}
             </ul>
           </nav>
-          <Link to="/courses">
+          <Link to="/web_site">
             <div className="mt-auto mb-6 shadow">
               <div className="flex gap-2 items-center justify-center bg-[#41bfb8] px-4 py-3 rounded-md cursor-pointer transition-all hover:brightness-110">
                 <LuBookOpenCheck className="text-2xl text-white font-semibold" />

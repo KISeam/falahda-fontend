@@ -19,15 +19,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Root></Root>}>
           <Route index element={<Home />} />
-          <Route path="courses" element={<Course></Course>}></Route>
+          <Route path="web_site" element={<Course></Course>}></Route>
           <Route path="events" element={<Events></Events>}></Route>
           <Route path="about" element={<About></About>}></Route>
           <Route path="contact" element={<Contact></Contact>}></Route>
           <Route path="contact" element={<Contact></Contact>}></Route>
           <Route path="login" element={<LoginPage></LoginPage>}></Route>
           <Route path="signup" element={<RegisterPage></RegisterPage>}></Route>
-          {/* <Route path="/courses/:id" element={<SingleCourse />} /> */}
-          <Route path="/courses/:id" element={<SingleWebSiteDetails />} />
+          {/* <Route path="/web_site/:id" element={<SingleCourse />} /> */}
+          <Route path="/web_site/:id" element={<SingleWebSiteDetails />} />
           <Route path="our-team" element={ <OurTeam></OurTeam> }></Route>
           <Route path="certification" element={ <Certification /> }></Route>
         </Route>
