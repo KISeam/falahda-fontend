@@ -33,7 +33,7 @@ const RightCoursesDetalis = ({ filteredCourses, selectedRating, onRatingChange }
     <div className="flex flex-col gap-7">
       <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
         <h1 className="text-[#F79952] text-4xl md:text-5xl outfit-semibold">
-          Our <span className="crd">Courses</span>
+          Our <span className="crd">Web Sites</span>
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-4">
           <div className="flex items-center gap-4">

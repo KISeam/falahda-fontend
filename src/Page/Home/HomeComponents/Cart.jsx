@@ -95,7 +95,7 @@ const Cart = () => {
                 </h2>
                 <p className="text-sm text-gray-600">{webSite.description}</p>
                 <p className="text-lg font-semibold text-gray-800 mt-2">
-                  {webSite.price}
+                  {webSite.price} $
                 </p>
               </div>
 
