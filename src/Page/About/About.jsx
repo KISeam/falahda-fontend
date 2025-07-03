@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('mission');
+  const [startCounting, setStartCounting] = useState(false);
   
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setStartCounting(true);
+    }
+  }, [inView]);
+
   return (
     <div className="font-sans bg-white">
       {/* Enhanced Hero Section without Image */}
@@ -35,17 +49,33 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
+      {/* Stats Section with Counting Animation */}
+      <section ref={ref} className="py-16 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
           {[
-            { value: '250K+', label: 'Satisfied Customers' },
-            { value: '98%', label: 'Positive Feedback' },
-            { value: '24/7', label: 'Dedicated Support' },
-            { value: '5M+', label: 'Products Delivered' }
+            { value: 250, suffix: 'K+', label: 'Satisfied Customers', duration: 2.5 },
+            { value: 98, suffix: '%', label: 'Positive Feedback', duration: 3 },
+            { value: 24, prefix: '', suffix: '/7', label: 'Dedicated Support', duration: 1.5 },
+            { value: 5, suffix: 'M+', label: 'Products Delivered', duration: 4 }
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 border border-gray-100 rounded-xl hover:shadow-lg transition duration-300 group">
-              <p className="text-4xl font-bold text-[#41bfb8] mb-2 group-hover:-translate-y-1 transition-transform duration-300">{stat.value}</p>
+              <p className="text-4xl font-bold text-[#41bfb8] mb-2 group-hover:-translate-y-1 transition-transform duration-300">
+                {startCounting ? (
+                  <>
+                    {stat.prefix}
+                    <CountUp 
+                      start={0} 
+                      end={stat.value} 
+                      duration={stat.duration}
+                      separator=","
+                      decimals={0}
+                    />
+                    {stat.suffix}
+                  </>
+                ) : (
+                  <span>0{stat.suffix}</span>
+                )}
+              </p>
               <p className="text-gray-600 font-medium">{stat.label}</p>
             </div>
           ))}
