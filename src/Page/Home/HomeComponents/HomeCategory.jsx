@@ -1,47 +1,66 @@
-import { FaOpencart } from "react-icons/fa";
-import { FaRegLightbulb } from "react-icons/fa6";
-import { BsPersonLinesFill } from "react-icons/bs";
+import {
+  FaTruck,
+  FaStar,
+  FaGift,
+  FaFire,
+  FaRegLightbulb,
+  FaHeart,
+} from "react-icons/fa";
+import { PiNewspaperClippingBold } from "react-icons/pi";
 
-import { FaRegChartBar } from "react-icons/fa";
 const HomeCategory = () => {
-
+  // Titles and Icons mapped professionally
   const categories = [
     {
-      icon: <FaOpencart className="cpr text-6xl" />,
-      title: "Website Build",
-      description: "24+ Websites",
+      icon: <FaTruck className="cpr text-6xl" />,
+      title: "Fast Delivery",
+      description: "Get your orders delivered within 24 hours.",
     },
     {
-      icon: <BsPersonLinesFill className="cpr text-6xl" />,
-      title: "Online Course",
-      description: "6+ Online Courses",
+      icon: <FaStar className="cpr text-6xl" />,
+      title: "Top Rated",
+      description: "Trusted by thousands of happy customers.",
     },
     {
-      icon: <FaRegLightbulb className="cpr text-6xl" />,
-      title: "Use Components",
-      description: "200+ Components",
+      icon: <PiNewspaperClippingBold className="cpr text-6xl" />,
+      title: "New Arrival",
+      description: "Explore our latest product collection.",
     },
     {
-      icon: <FaRegChartBar className="cpr text-6xl" />,
-      title: "Digital Marketing",
-      description: "24 Websites",
+      icon: <FaFire className="cpr text-6xl" />,
+      title: "Best Seller",
+      description: "Top-selling items loved by everyone.",
+    },
+    {
+      icon: <FaGift className="cpr text-6xl" />,
+      title: "Limited Offer",
+      description: "Grab exclusive deals before they're gone.",
+    },
+    {
+      icon: <FaHeart className="cpr text-6xl" />,
+      title: "Customer Favorite",
+      description: "Highly recommended by our users.",
     },
   ];
-  
+
   return (
-    <div className="flex justify-center font-poppins py-16 gap-8 flex-wrap bg-white">
-    {categories.map((category, index) => (
-      <div
-        key={index}
-        className="flex w-72 justify-center flex-col items-center border border-[#e6e6e6] py-9 rounded-xl text-black"
-      >
-        {category.icon}
-        <p className="text-2xl font-semibold mt-6 mb-2 outfit">{category.title}</p>
-        <p className="text-sm" >{category.description}</p>
+    <div className="py-16 px-4 bg-white font-poppins">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        {categories.map((category, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300"
+          >
+            {category.icon}
+            <h3 className="mt-6 text-2xl font-semibold text-gray-800">
+              {category.title}
+            </h3>
+            <p className="mt-2 text-sm text-gray-500">{category.description}</p>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-);
+    </div>
+  );
 };
 
 export default HomeCategory;

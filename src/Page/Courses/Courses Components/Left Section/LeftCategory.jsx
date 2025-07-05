@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
-import { IoSearchSharp } from "react-icons/io5";
+import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { IoSearchSharp } from "react-icons/io5";
 
 const LeftCategory = ({
   courseCategories,
   selectedCategories,
   handleCheckboxChange,
-  searchQuery,
-  onSearch,
   selectedRating,
   onRatingChange,
   showMobileFilters,
@@ -19,13 +17,20 @@ const LeftCategory = ({
   maxPrice,
   onMinPriceChange,
   onMaxPriceChange,
+  searchQuery,
+  onSearch
 }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSearchChange = (e) => {
-    onSearch(e.target.value);
+  // Local state for mobile search input
+  const [mobileSearchInput, setMobileSearchInput] = useState(searchQuery);
+  
+  // Handle mobile search submission
+  const handleMobileSearch = (e) => {
+    e.preventDefault();
+    onSearch(mobileSearchInput);
   };
 
   const priceRanges = [
@@ -38,18 +43,27 @@ const LeftCategory = ({
 
   const filterContent = (
     <div className="w-full space-y-6 p-4 rounded-xl shadow-lg">
-      {/* Search Bar */}
-      <div className="relative">
-        <input
-          className="w-full pl-5 pr-12 py-3 text-base text-gray-800 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F79952] focus:border-transparent transition-all duration-300 shadow-sm"
-          type="text"
-          placeholder="Search courses..."
-          aria-label="Search courses"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-        <IoSearchSharp className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl cursor-pointer hover:text-[#F79952] transition-colors duration-300" />
-      </div>
+      {/* Mobile Search Bar (only visible in mobile filters panel) */}
+      {showMobileFilters && (
+        <div className="relative mb-4">
+          <form onSubmit={handleMobileSearch}>
+            <input
+              className="w-full pl-5 pr-12 py-3 text-base text-gray-800 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F79952] focus:border-transparent transition-all duration-300 shadow-sm"
+              type="text"
+              placeholder="Search courses..."
+              aria-label="Search courses"
+              value={mobileSearchInput}
+              onChange={(e) => setMobileSearchInput(e.target.value)}
+            />
+            <button 
+              type="submit"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl cursor-pointer hover:text-[#F79952] transition-colors duration-300"
+            >
+              <IoSearchSharp />
+            </button>
+          </form>
+        </div>
+      )}
 
       {/* Categories Section */}
       <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
@@ -69,7 +83,7 @@ const LeftCategory = ({
             >
               <input
                 type="checkbox"
-                className="checkbox w-5 h-5 rounded-sm"
+                className="checkbox w-5 h-5 rounded-sm text-[#F79952] bg-white border border-gray-200"
                 checked={selectedCategories === category.name}
                 onChange={() => handleCheckboxChange(category.name)}
               />
@@ -85,7 +99,6 @@ const LeftCategory = ({
           Price
         </h3>
         <div className="flex flex-col gap-3 p-5">
-          {/* Radio Buttons for Predefined Price Ranges */}
           {priceRanges.map((range) => (
             <label
               key={range.value}
@@ -98,7 +111,7 @@ const LeftCategory = ({
               <input
                 type="checkbox"
                 name="priceRange"
-                className="checkbox w-5 h-5 rounded-sm"
+                className="checkbox w-5 h-5 rounded-sm text-[#F79952] bg-white border border-gray-200"
                 checked={selectedPriceRange === range.value}
                 onChange={() => onPriceRangeChange(range.value)}
               />
@@ -126,7 +139,7 @@ const LeftCategory = ({
               <input
                 type="checkbox"
                 name="rating"
-                className="checkbox w-5 h-5 rounded-sm"
+                className="checkbox w-5 h-5 rounded-sm text-[#F79952] bg-white border border-gray-200"
                 checked={selectedRating === rating}
                 onChange={() => onRatingChange(rating)}
               />

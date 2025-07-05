@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import LeftCategory from "./Courses Components/Left Section/LeftCategory";
 import RightCoursesDetalis from "./Courses Components/Right Section/RightCoursesDetalis";
 import { useSearchParams } from "react-router-dom";
-import SectionHeading from "../../Components/Shared/SectionHeading";
+import { IoSearchSharp } from "react-icons/io5";
 
 const Course = () => {
   const [courses, setCourses] = useState([]);
@@ -13,6 +13,7 @@ const Course = () => {
   const [loadMoreLoading, setLoadMoreLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchInput, setSearchInput] = useState(""); // Separate state for input field
   const [selectedRating, setSelectedRating] = useState(null);
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
   const [minPrice, setMinPrice] = useState(null);
@@ -34,6 +35,7 @@ const Course = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Initialize states from URL parameters
   useEffect(() => {
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
@@ -46,7 +48,12 @@ const Course = () => {
       setSelectedCategories(decodeURIComponent(categoryParam));
     }
     if (searchParam) {
-      setSearchQuery(decodeURIComponent(searchParam));
+      const decodedSearch = decodeURIComponent(searchParam);
+      setSearchQuery(decodedSearch);
+      setSearchInput(decodedSearch);
+    } else {
+      setSearchQuery("");
+      setSearchInput("");
     }
     if (ratingParam) {
       setSelectedRating(Number(ratingParam));
@@ -74,14 +81,6 @@ const Course = () => {
         setAllCourses(normalizedData);
         setCourses(normalizedData.slice(0, coursesPerPage));
         setInitialLoading(false);
-        console.log(
-          "Unique ratings:",
-          [...new Set(normalizedData.map((course) => course.totalRating))]
-        );
-        console.log(
-          "Unique prices:",
-          [...new Set(normalizedData.map((course) => course.price))]
-        );
       })
       .catch((error) => console.error("Error fetching courses:", error));
   }, []);
@@ -232,6 +231,7 @@ const Course = () => {
   const resetFilters = () => {
     setSelectedCategories("All");
     setSearchQuery("");
+    setSearchInput("");
     setSelectedRating(null);
     setSelectedPriceRange("all");
     setMinPrice(null);
@@ -310,55 +310,94 @@ const Course = () => {
     return "none";
   };
 
+  // Handle search form submission
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    handleSearch(searchInput);
+  };
+
   return (
-    <>
-      <div className="bg-[#ecfcfb] py-12">
-        <div className="mb-24 mt-4">
-          <SectionHeading
-            title={"Discover Your Next Skill"}
-            description={
-              "Unlock a variety of practical and in-demand courses tailored to your career goals. Whether you're starting fresh or aiming higher, our learning paths are made to guide you every step of the way. Each course is crafted by industry experts to ensure you gain real-world skills that make a difference."
-            }
-          ></SectionHeading>
+    <div className="bg-[#f5fbf1]">
+      {/* Professional Search Header */}
+      <div className="pt-10 pb-8 relative">
+        <div className="px-4">
+          <form onSubmit={handleSearchSubmit}>
+            <div className="flex items-center bg-white rounded-full shadow-xl overflow-hidden max-w-6xl mx-auto relative">
+              <input
+                type="text"
+                className="w-full py-4 pl-6 pr-12 text-gray-800 placeholder-gray-500 focus:outline-none"
+                placeholder="Search courses by title, category, or specialization..."
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+              />
+              <button 
+                type="submit"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-[#F79952] hover:bg-[#e08a48] text-white rounded-full p-3 transition-colors duration-300"
+                aria-label="Search courses"
+              >
+                <IoSearchSharp className="text-xl" />
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="lg:w-9/11 mx-auto px-4 lg:px-0">
-          <div>
-            {initialLoading ? (
-              <div className="flex justify-center items-center h-screen">
-                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#F79952]"></div>
-              </div>
-            ) : (
-              <div className="flex flex-col lg:flex-row gap-4">
-                <div className="w-full lg:w-[20%] lg:sticky lg:top-24 lg:self-start">
-                  <LeftCategory
-                    courseCategories={courseCategories}
-                    selectedCategories={selectedCategories}
-                    handleCheckboxChange={handleCheckboxChange}
-                    searchQuery={searchQuery}
-                    onSearch={handleSearch}
-                    selectedRating={selectedRating}
-                    onRatingChange={handleRatingChange}
-                    showMobileFilters={showMobileFilters}
-                    setShowMobileFilters={setShowMobileFilters}
-                    resetFilters={resetFilters}
-                    selectedPriceRange={selectedPriceRange}
-                    onPriceRangeChange={handlePriceRangeChange}
-                    minPrice={minPrice}
-                    maxPrice={maxPrice}
-                    onMinPriceChange={handleMinPriceChange}
-                    onMaxPriceChange={handleMaxPriceChange}
-                  />
+      </div>
+
+      {/* Main Content */}
+      <div className="py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Filters Section */}
+            <div className="w-full lg:w-[25%] lg:sticky lg:top-24 lg:self-start">
+              <LeftCategory
+                courseCategories={courseCategories}
+                selectedCategories={selectedCategories}
+                handleCheckboxChange={handleCheckboxChange}
+                selectedRating={selectedRating}
+                onRatingChange={handleRatingChange}
+                showMobileFilters={showMobileFilters}
+                setShowMobileFilters={setShowMobileFilters}
+                resetFilters={resetFilters}
+                selectedPriceRange={selectedPriceRange}
+                onPriceRangeChange={handlePriceRangeChange}
+                minPrice={minPrice}
+                maxPrice={maxPrice}
+                onMinPriceChange={handleMinPriceChange}
+                onMaxPriceChange={handleMaxPriceChange}
+                searchQuery={searchQuery}
+                onSearch={handleSearch}
+              />
+            </div>
+            
+            {/* Courses Section */}
+            <div className="w-full lg:w-[75%]">
+              {initialLoading ? (
+                <div className="flex justify-center items-center h-screen">
+                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2c5e2a]"></div>
                 </div>
-                <div
-                  className="w-full lg:w-3/4"
-                  ref={detailsRef}
-                  style={{ transform: getTransformValue() }}
-                >
-                  <RightCoursesDetalis
-                    filteredCourses={displayedcourses}
-                    selectedRating={selectedRating}
-                    onRatingChange={handleRatingChange}
-                  />
+              ) : (
+                <>
+                  {/* Results Header */}
+                  {searchQuery && (
+                    <div className="mb-6">
+                      <h2 className="text-xl font-semibold text-gray-800">
+                        Search results for: <span className="text-[#2c5e2a]">"{searchQuery}"</span>
+                      </h2>
+                      <p className="text-gray-600 mt-1">
+                        {displayedcourses.length} courses found
+                      </p>
+                    </div>
+                  )}
+                  
+                  {/* Courses List */}
+                  <div ref={detailsRef}>
+                    <RightCoursesDetalis
+                      filteredCourses={displayedcourses}
+                      selectedRating={selectedRating}
+                      onRatingChange={handleRatingChange}
+                    />
+                  </div>
+                  
+                  {/* Load More Button */}
                   {selectedCategories === "All" &&
                     searchQuery === "" &&
                     selectedRating === null &&
@@ -366,27 +405,37 @@ const Course = () => {
                     minPrice === null &&
                     maxPrice === null &&
                     allCourses.length > courses.length && (
-                      <div className="flex justify-center my-3">
+                      <div className="flex justify-center my-8">
                         <button
                           onClick={loadMorecourses}
                           disabled={loadMoreLoading}
-                          className={`px-6 py-2 cursor-pointer ${
+                          className={`px-8 py-3 rounded-full cursor-pointer font-medium transition-all duration-300 ${
                             loadMoreLoading
-                              ? "bg-[#F79952] cursor-not-allowed"
-                              : "bg-[#f2a56a] hover:bg-[#F79952]"
-                          } text-white rounded-lg transition duration-300`}
+                              ? "bg-[#2c5e2a] cursor-not-allowed"
+                              : "bg-[#2c5e2a] hover:bg-[#1a3c18] transform hover:-translate-y-1"
+                          } text-white shadow-lg hover:shadow-xl flex items-center`}
                         >
-                          {loadMoreLoading ? "Loading..." : "Load More"}
+                          {loadMoreLoading ? (
+                            <>
+                              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                              </svg>
+                              Loading...
+                            </>
+                          ) : (
+                            "Load More Courses"
+                          )}
                         </button>
                       </div>
                     )}
-                </div>
-              </div>
-            )}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

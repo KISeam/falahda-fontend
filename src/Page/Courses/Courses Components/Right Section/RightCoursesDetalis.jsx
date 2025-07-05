@@ -4,7 +4,6 @@ import WebCard from "../../../../Components/Shared/WebCard";
 const RightCoursesDetalis = ({ filteredCourses, selectedRating, onRatingChange }) => {
   const [selectedType, setSelectedType] = useState("All");
   const [selectedMentor, setSelectedMentor] = useState(null);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const allMentors = [
     ...new Set(filteredCourses.map((course) => course.instructorName)),
@@ -22,17 +21,13 @@ const RightCoursesDetalis = ({ filteredCourses, selectedRating, onRatingChange }
     setSelectedMentor(null);
   };
 
-  const handleMentorSelect = (mentor) => {
-    setSelectedMentor(mentor === selectedMentor ? null : mentor);
-    setIsDropdownOpen(false);
-  };
 
   const typeButtons = ["All", "MERN", "Wordpress", "PHP"];
 
   return (
     <div className="flex flex-col gap-7">
       <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-        <h1 className="text-[#F79952] text-4xl md:text-5xl outfit-semibold">
+        <h1 className="text-[#41bfb8] text-4xl md:text-5xl outfit-semibold">
           Our <span className="crd">Web Sites</span>
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-4">
@@ -50,43 +45,6 @@ const RightCoursesDetalis = ({ filteredCourses, selectedRating, onRatingChange }
                 <p className="text-sm md:text-base">{type}</p>
               </button>
             ))}
-          </div>
-          <div className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className={`py-3 px-4 cursor-pointer rounded-md shadow-md transition-colors text-white ${
-                selectedMentor
-                  ? "bg-[#41bfb8] font-medium"
-                  : "bg-[#F79952] hover:bg-[#F79952]/85"
-              }`}
-            >
-              <p className="text-sm md:text-base">
-                {selectedMentor || " Select Mentor 🖌️"}
-              </p>
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-50 bg-white rounded-md shadow-lg z-10 max-h-100 overflow-y-auto">
-                {allMentors.length > 0 ? (
-                  allMentors.map((mentor) => (
-                    <div
-                      key={mentor}
-                      onClick={() => handleMentorSelect(mentor)}
-                      className={`px-4 py-2 text-base cursor-pointer ${
-                        selectedMentor === mentor
-                          ? "bg-[#41bfb8] text-white"
-                          : "hover:bg-gray-100 text-black"
-                      }`}
-                    >
-                      {mentor}
-                    </div>
-                  ))
-                ) : (
-                  <div className="px-4 py-2 text-sm text-gray-500">
-                    No mentors available
-                  </div>
-                )}
-              </div>
-            )}
           </div>
         </div>
       </div>
