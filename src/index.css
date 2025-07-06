@@ -3,11 +3,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Poppins Font */
-.poppins {
-  font-family: "Poppins", sans-serif;
-}
-
 .lobster {
   font-family: "Playwrite AU SA", cursive;
 }
@@ -38,7 +33,7 @@
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "", sans-serif;
 }
 @keyframes float-slow {
   0% {

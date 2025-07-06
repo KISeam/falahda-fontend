@@ -372,7 +372,7 @@ const Course = () => {
             <div className="w-full lg:w-[75%]">
               {initialLoading ? (
                 <div className="flex justify-center items-center h-screen">
-                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2c5e2a]"></div>
+                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#41bfb8]"></div>
                 </div>
               ) : (
                 <>
@@ -380,7 +380,7 @@ const Course = () => {
                   {searchQuery && (
                     <div className="mb-6">
                       <h2 className="text-xl font-semibold text-gray-800">
-                        Search results for: <span className="text-[#2c5e2a]">"{searchQuery}"</span>
+                        Search results for: <span className="text-[#41bfb8]">"{searchQuery}"</span>
                       </h2>
                       <p className="text-gray-600 mt-1">
                         {displayedcourses.length} courses found
@@ -411,8 +411,8 @@ const Course = () => {
                           disabled={loadMoreLoading}
                           className={`px-8 py-3 rounded-full cursor-pointer font-medium transition-all duration-300 ${
                             loadMoreLoading
-                              ? "bg-[#2c5e2a] cursor-not-allowed"
-                              : "bg-[#2c5e2a] hover:bg-[#1a3c18] transform hover:-translate-y-1"
+                              ? "bg-[#41bfb8] cursor-not-allowed"
+                              : "bg-[#41bfb8] hover:brightness-110 transform hover:-translate-y-1"
                           } text-white shadow-lg hover:shadow-xl flex items-center`}
                         >
                           {loadMoreLoading ? (

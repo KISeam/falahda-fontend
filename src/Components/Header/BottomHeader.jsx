@@ -86,14 +86,14 @@ const BottomHeader = () => {
 
             <div className="navbar-center hidden lg:flex lg:justify-between">
               {/* Navigation Links - Desktop */}
-              <div className="hidden lg:flex lg:gap-4 2xl:gap-8 font-poppins">
+              <div className="hidden lg:flex lg:gap-4 2xl:gap-8 font-">
                 {navLinks.map(({ to, label }) => (
                   <NavLink
                     key={to}
                     to={to}
                     className={({ isActive }) =>
                       `relative pb-1 transition-all duration-300 
-                                  hover:text-[#41bfb8] text-[16px] poppins
+                                  hover:text-[#41bfb8] text-[16px] 
                                   ${
                                     isActive
                                       ? "text-[#00DDB3] after:scale-x-100"

@@ -14,7 +14,7 @@ const Cart = () => {
         // Add fastDelivery property to some items
         const updatedData = data.slice(0, 10).map((site, index) => ({
           ...site,
-          fastDelivery: index % 3 === 0 // Every 3rd item has fast delivery
+          fastDelivery: index % 3 === 0, // Every 3rd item has fast delivery
         }));
         setWebSites(updatedData);
       });
@@ -38,7 +38,7 @@ const Cart = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen px-4 py-12 font-poppins">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen px-4 py-12 font-">
       <div className="max-w-7xl mx-auto">
         {/* Modern Header */}
         <div className="text-center mb-16">
@@ -74,7 +74,6 @@ const Cart = () => {
               key={webSite.id}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              
               {/* Image with Hover Effect */}
               <div className="relative h-60 overflow-hidden">
                 <img
@@ -97,11 +96,11 @@ const Cart = () => {
                     {webSite.category}
                   </span>
                 </div>
-                
+
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {webSite.description}
                 </p>
-                
+
                 <div className="flex justify-between items-center mt-5">
                   <span className="text-lg font-bold text-gray-900">
                     {webSite.price} $
